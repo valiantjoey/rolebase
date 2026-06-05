@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Application Received — Hikari Electrical & Automation</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --brand-primary:   #6aa33d;
+  --brand-secondary: #7ab648;
+  --brand-950:       #141811;
+  --brand-900:       #364729;
+  --brand-mid:       #425e2c;
+  --brand-dark:      #232d1a;
+  --brand-accent:    #67a239;
+  --brand-success:   #364729;
+  --brand-highlight: #c4dbb2;
+  --brand-pale:      #e8ece4;
+  --brand-faint:     #f7f8f7;
+  --brand-cta:       #67a239;
+  --brand-cta-text:  #1a1a2e;
+  --brand-nav-cta:   #ffffff;
+  --brand-nav-cta-text: #364729;
+  --brand-rgb:       106,163,61;
+  --body:       #1A1A2A;
+  --gray:       #6B7280;
+  --gray-light: #E5E7EB;
+  --gray-faint: #F9FAFB;
+  --white:      #FFFFFF;
+}
+body{font-family:'Inter',sans-serif;color:var(--body);background:var(--white);overflow-x:hidden;min-height:100vh;display:flex;flex-direction:column}
+a{text-decoration:none}
+
+/* ── NAV ── */
+.nav{background:var(--brand-900);height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 40px;box-shadow:0 2px 20px rgba(0,0,0,.35)}
+
+/* ── HERO STRIP ── */
+.ty-hero{background:linear-gradient(140deg,var(--brand-900) 0%,var(--brand-dark) 100%);padding:64px 40px 72px;text-align:center;position:relative;overflow:hidden}
+.ty-hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='600' height='600' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='500' cy='100' r='350' fill='rgba(255,255,255,0.02)'/%3E%3Ccircle cx='100' cy='500' r='250' fill='rgba(255,255,255,0.015)'/%3E%3C/svg%3E") no-repeat right top;pointer-events:none}
+.ty-hero-inner{max-width:680px;margin:0 auto;position:relative;z-index:1}
+.ty-icon{width:80px;height:80px;border-radius:50%;background:rgba(255,255,255,.1);border:2px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:36px;margin:0 auto 28px}
+.ty-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:6px 18px;font-size:11px;font-weight:700;color:rgba(255,255,255,.8);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:20px}
+.ty-badge .dot{width:7px;height:7px;border-radius:50%;background:var(--brand-highlight)}
+.ty-h1{font-size:42px;font-weight:900;color:#fff;line-height:1.08;letter-spacing:-1.2px;margin-bottom:16px}
+.ty-h1 span{color:var(--brand-highlight)}
+.ty-sub{font-size:17px;color:rgba(255,255,255,.7);line-height:1.7;max-width:520px;margin:0 auto}
+
+/* ── WHAT HAPPENS NEXT ── */
+.next-section{background:var(--brand-faint);padding:64px 40px}
+.next-inner{max-width:760px;margin:0 auto}
+.next-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--brand-accent);margin-bottom:12px}
+.next-h2{font-size:32px;font-weight:800;color:var(--brand-dark);letter-spacing:-.8px;line-height:1.15;margin-bottom:40px}
+.steps{display:flex;flex-direction:column;gap:0}
+.step{display:flex;gap:24px;align-items:flex-start;padding:28px 0;border-bottom:1px solid rgba(var(--brand-rgb),.1)}
+.step:last-child{border-bottom:none}
+.step-num{width:44px;height:44px;border-radius:50%;background:var(--brand-900);color:#fff;font-size:16px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.step-body{}
+.step-title{font-size:17px;font-weight:700;color:var(--brand-dark);margin-bottom:6px}
+.step-desc{font-size:14px;color:var(--gray);line-height:1.65}
+
+/* ── TRUST STRIP ── */
+.trust-strip{background:var(--brand-900);padding:40px;flex:1}
+.trust-strip-inner{max-width:760px;margin:0 auto;display:flex;gap:40px;align-items:center;flex-wrap:wrap}
+.trust-strip-text{flex:1;min-width:240px}
+.trust-strip-text h3{font-size:20px;font-weight:800;color:#fff;margin-bottom:8px;letter-spacing:-.4px}
+.trust-strip-text p{font-size:14px;color:rgba(255,255,255,.65);line-height:1.65}
+.trust-strip-items{display:flex;flex-direction:column;gap:12px;flex:1;min-width:240px}
+.trust-strip-item{display:flex;align-items:center;gap:12px;font-size:14px;font-weight:600;color:rgba(255,255,255,.85)}
+.trust-strip-item .check{width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0}
+
+/* ── FOOTER ── */
+footer{background:var(--brand-950);padding:32px 40px;margin-top:auto;border-top:1px solid rgba(255,255,255,.06)}
+.footer-inner{max-width:760px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.footer-copy{font-size:12px;color:rgba(255,255,255,.42);line-height:1.7}
+.footer-links{display:flex;gap:20px}
+.footer-links a{color:rgba(255,255,255,.55);font-size:12px;text-decoration:none}
+.footer-links a:hover{color:rgba(255,255,255,.85)}
+
+@media(max-width:768px){
+  .nav{padding:0 20px}
+  .ty-hero{padding:48px 20px 56px}
+  .ty-h1{font-size:30px}
+  .next-section{padding:48px 20px}
+  .trust-strip{padding:32px 20px}
+  .trust-strip-inner{gap:24px}
+  footer{padding:28px 20px}
+  .footer-inner{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div>
+    <img src="https://www.hikea.com.au/logo-white.png" alt="Hikari Electrical & Automation" style="height:36px;filter:brightness(0) invert(1)">
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="ty-hero">
+  <div class="ty-hero-inner">
+    <div class="ty-badge"><span class="dot"></span>Application Received</div>
+    <div class="ty-icon">✅</div>
+    <h1 class="ty-h1">Your application<br><span>has been received</span></h1>
+    <p class="ty-sub">Thank you for applying for <strong style="color:#fff">Appliance Repair Technician</strong> at Hikari Electrical & Automation. Andrew will be in touch via email shortly.</p>
+  </div>
+</section>
+
+<!-- WHAT HAPPENS NEXT -->
+<section class="next-section">
+  <div class="next-inner">
+    <div class="next-label">What Happens Now</div>
+    <h2 class="next-h2">Here's what to expect</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <div class="step-title">Application review</div>
+          <div class="step-desc">Andrew will personally review your application within 1–2 business days. No automated filters — a real person reads every submission.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <div class="step-title">We'll reach out via email</div>
+          <div class="step-desc">If you're a strong fit, Andrew will email you directly at <strong>andrew@hikea.com.au</strong> to arrange a quick conversation. Keep an eye on your inbox.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <div class="step-title">Meet the team</div>
+          <div class="step-desc">Shortlisted candidates will be invited to meet the team at Hikari Electrical & Automation. It's a relaxed conversation — we want to make sure it's a great fit for both sides.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<section class="trust-strip">
+  <div class="trust-strip-inner">
+    <div class="trust-strip-text">
+      <h3>While you wait</h3>
+      <p>You're applying to join a team that takes its people seriously. Here's what makes Hikari Electrical & Automation different.</p>
+    </div>
+    <div class="trust-strip-items">
+      <div class="trust-strip-item"><div class="check">✓</div>Steady Electrical Work — No Gaps</div>
+      <div class="trust-strip-item"><div class="check">✓</div>Company Van + Phone (once proven)</div>
+      <div class="trust-strip-item"><div class="check">✓</div>NSW Public Housing Maintenance</div>
+      <div class="trust-strip-item"><div class="check">✓</div>Leadership Opportunities Available</div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-copy">
+      Copyright © 2026 Hikari Electrical & Automation – All Rights Reserved.
+    </div>
+    <div class="footer-links">
+      <a href="/legal#terms">Terms &amp; Conditions</a>
+      <a href="/legal#privacy">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Valiant Feedback Layer -->
+<script>
+  window.FEEDBACK_CONFIG = {
+    supabaseUrl: 'https://okwxnyqhoflvznxdrwfm.supabase.co',
+    supabaseKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9rd3hueXFob2ZsdnpueGRyd2ZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUyNzgzODIsImV4cCI6MjA5MDg1NDM4Mn0.1mNrVIOl2Kt0fFdhpI6r9vUc6abdpu_g-YPar99UFkE',
+    pageId: 'appliance-repair-technician-thankyou',
+    clientTokens: ['hikea']
+  }
+</script>
+<script src="/feedback.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "rewrites": [
+    {
+      "source": "/appliance-repair-technician/thank-you",
+      "destination": "/appliance-repair-technician/thankyou.html"
+    },
+    {
+      "source": "/appliance-repair-technician",
+      "destination": "/appliance-repair-technician/index.html"
+    },
+    {
+      "source": "/electrical-technician/thank-you",
+      "destination": "/electrical-technician/thankyou.html"
+    },
+    {
+      "source": "/electrical-technician",
+      "destination": "/electrical-technician/index.html"
+    }
+  ]
+}

@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Fiacon Cleaning Services — Commercial Cleaning Contractor Wanted | Canberra</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  /* ── Brand palette (derived by colour intelligence) ── */
+  --brand-primary:   #003e8d;
+  --brand-secondary: #e50f41;
+  --brand-950:       #0e141b;   /* footer bg */
+  --brand-900:       #1d3553;   /* nav, coloured sections */
+  --brand-mid:       #1c406e;   /* gradient middle stop */
+  --brand-dark:      #132235;  /* headlines, card titles */
+  --brand-accent:    #133f76;/* labels, borders, list markers */
+  --brand-success:   #1daa51;/* done dots, checkmarks */
+  --brand-highlight: #a5c3e9;/* hero h1 highlight word */
+  --brand-pale:      #e2e7ee;  /* icon bg tints */
+  --brand-faint:     #f6f7f9; /* subtle section backgrounds */
+  --brand-cta:       #133f76;   /* CTA button bg on white */
+  --brand-cta-text:  #ffffff;/* CTA button text */
+  --brand-nav-cta:   #ffffff;/* nav button bg */
+  --brand-nav-cta-text: #1d3553;/* nav button text */
+  --brand-rgb:       0,62,141; /* for rgba() usage */
+  /* ── Neutrals (always fixed) ── */
+  --body:       #1A1A2A;
+  --gray:       #6B7280;
+  --gray-light: #E5E7EB;
+  --gray-faint: #F9FAFB;
+  --white:      #FFFFFF;
+  --red:        #DC2626;
+}
+body{font-family:'Inter',sans-serif;color:var(--body);background:var(--white);overflow-x:hidden;font-size:16px;line-height:1.6}
+img{max-width:100%}
+a{text-decoration:none}
+
+/* ── NAV ── */
+.nav{background:var(--brand-900);height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 40px;position:sticky;top:0;z-index:200;box-shadow:0 2px 20px rgba(0,0,0,.35)}
+.nav-cta{background:var(--brand-nav-cta);color:var(--brand-nav-cta-text);font-family:'Inter',sans-serif;font-size:14px;font-weight:700;padding:10px 22px;border-radius:6px;border:none;cursor:pointer;transition:opacity .2s;letter-spacing:.3px;text-decoration:none}
+.nav-cta:hover{opacity:.85}
+
+/* ── HERO ── */
+.hero{background:linear-gradient(140deg,var(--brand-900) 0%,var(--brand-dark) 100%);padding:56px 40px 60px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='600' height='600' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='500' cy='100' r='350' fill='rgba(255,255,255,0.025)'/%3E%3Ccircle cx='100' cy='500' r='250' fill='rgba(255,255,255,0.02)'/%3E%3C/svg%3E") no-repeat right top;pointer-events:none}
+.hero-layout{max-width:1100px;margin:0 auto;position:relative;z-index:1;display:grid;grid-template-columns:1fr 420px;gap:56px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:7px 18px;font-size:11px;font-weight:700;color:#fff;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:20px}
+.hero-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--brand-highlight);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.hero h1{font-size:46px;font-weight:900;color:#fff;line-height:1.05;letter-spacing:-1.5px;margin-bottom:12px}
+.hero h1 .highlight{color:var(--brand-highlight)}
+.hero-location{font-size:15px;font-weight:600;color:rgba(255,255,255,.65);letter-spacing:.3px;margin-bottom:28px;display:flex;align-items:center;gap:8px}
+.hero-stats{display:flex;gap:0;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:12px;overflow:hidden;width:fit-content;margin-bottom:24px}
+.hero-stat{padding:16px 28px;text-align:center;border-right:1px solid rgba(255,255,255,.1)}
+.hero-stat:last-child{border-right:none}
+.hero-stat-val{font-size:28px;font-weight:900;color:#fff;letter-spacing:-1px;line-height:1}
+.hero-stat-val .unit{font-size:16px;font-weight:700}
+.hero-stat-label{font-size:11px;font-weight:600;color:rgba(255,255,255,.5);letter-spacing:.5px;text-transform:uppercase;margin-top:5px}
+.hero-trust{font-size:13px;color:rgba(255,255,255,.45);display:flex;align-items:center;gap:6px}
+.hero-trust span{color:rgba(255,255,255,.65)}
+
+/* ── MULTI-STEP FORM ── */
+.msf-card{background:#fff;border-radius:20px;padding:32px 28px;box-shadow:0 12px 48px rgba(0,0,0,.3);position:relative}
+.msf-progress{display:flex;align-items:center;gap:0;margin-bottom:24px}
+.msf-step-dot{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;transition:all .3s}
+.msf-step-dot.done{background:var(--brand-success);color:#fff}
+.msf-step-dot.active{background:var(--brand-900);color:#fff}
+.msf-step-dot.pending{background:var(--gray-light);color:var(--gray)}
+.msf-step-line{flex:1;height:2px;transition:background .3s}
+.msf-step-line.done{background:var(--brand-success)}
+.msf-step-line.pending{background:var(--gray-light)}
+.msf-step-label{font-size:11px;color:var(--gray);text-align:center;margin-bottom:20px;font-weight:500}
+.msf-step{display:none}
+.msf-step.active{display:block}
+.msf-step-title{font-size:18px;font-weight:800;color:var(--brand-dark);margin-bottom:4px;letter-spacing:-.3px}
+.msf-step-sub{font-size:13px;color:var(--gray);margin-bottom:20px}
+.msf-input{width:100%;padding:12px 14px;border:1.5px solid var(--gray-light);border-radius:8px;font-family:'Inter',sans-serif;font-size:15px;color:var(--body);outline:none;transition:border-color .2s;margin-bottom:12px}
+.msf-input:focus{border-color:var(--brand-accent);box-shadow:0 0 0 3px rgba(var(--brand-rgb),.12)}
+.msf-q{margin-bottom:16px}
+.msf-q-label{font-size:13px;font-weight:600;color:var(--body);margin-bottom:8px}
+.msf-opts{display:flex;gap:8px;flex-wrap:wrap}
+.msf-opt{display:flex;align-items:center;gap:6px;background:var(--brand-faint);border:1.5px solid var(--gray-light);border-radius:8px;padding:8px 14px;cursor:pointer;font-size:13px;font-weight:500;transition:all .2s;user-select:none}
+.msf-opt input{display:none}
+.msf-opt.selected{background:rgba(var(--brand-rgb),.07);border-color:var(--brand-accent);color:var(--brand-dark)}
+.msf-textarea{width:100%;padding:12px 14px;border:1.5px solid var(--gray-light);border-radius:8px;font-family:'Inter',sans-serif;font-size:13px;color:var(--body);min-height:80px;resize:vertical;outline:none;transition:border-color .2s;margin-top:4px}
+.msf-textarea:focus{border-color:var(--brand-accent);box-shadow:0 0 0 3px rgba(var(--brand-rgb),.12)}
+.msf-btn{width:100%;background:var(--brand-900);color:#fff;font-family:'Inter',sans-serif;font-size:15px;font-weight:700;padding:14px;border-radius:8px;border:none;cursor:pointer;letter-spacing:.3px;transition:all .2s;margin-top:4px;box-shadow:0 4px 20px rgba(0,0,0,.25)}
+.msf-btn:hover{opacity:.88}
+.msf-trust{font-size:11px;color:var(--gray);text-align:center;margin-top:10px}
+.msf-success{text-align:center;padding:16px 0}
+.msf-success-icon{font-size:48px;margin-bottom:12px}
+.msf-success-title{font-size:22px;font-weight:800;color:var(--brand-dark);margin-bottom:8px}
+.msf-success-sub{font-size:14px;color:var(--gray);line-height:1.6}
+
+/* ── TRUST BAR ── */
+.trust-bar{background:var(--brand-faint);border-bottom:1px solid rgba(var(--brand-rgb),.1);padding:18px 40px;display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;color:var(--brand-dark)}
+.trust-icon{width:32px;height:32px;border-radius:8px;background:rgba(var(--brand-rgb),.1);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+
+/* ── SHARED ── */
+.section{padding:72px 40px}
+.section-inner{max-width:920px;margin:0 auto}
+.section-inner-wide{max-width:1080px;margin:0 auto}
+.section-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--brand-accent);margin-bottom:12px}
+.section-h2{font-size:38px;font-weight:800;color:var(--brand-dark);letter-spacing:-1px;line-height:1.15;margin-bottom:14px}
+.section-sub{font-size:16px;color:var(--gray);line-height:1.7;max-width:620px}
+.btn-primary{background:var(--brand-900);color:#fff;font-family:'Inter',sans-serif;font-size:16px;font-weight:700;padding:16px 32px;border-radius:8px;border:none;cursor:pointer;transition:all .2s;letter-spacing:.3px;box-shadow:0 4px 20px rgba(0,0,0,.22);display:inline-block}
+.btn-primary:hover{opacity:.88;transform:translateY(-1px)}
+/* Button on dark brand backgrounds — invert to white */
+.reqs-callout .btn-primary{background:#fff;color:var(--brand-dark);box-shadow:0 4px 20px rgba(0,0,0,.2)}
+.offer-section .btn-primary{background:#fff;color:var(--brand-dark);box-shadow:0 4px 20px rgba(0,0,0,.2)}
+.section-cta{text-align:center;margin-top:36px}
+
+/* ── INTRO ── */
+.intro-section{background:#fff}
+.intro-box{background:rgba(var(--brand-rgb),.05);border:1px solid rgba(var(--brand-rgb),.14);border-radius:16px;padding:40px 48px;margin-top:32px;border-left:5px solid var(--brand-accent)}
+.intro-box p{font-size:17px;color:var(--body);line-height:1.8}
+
+/* ── OFFER ── */
+.offer-section{background:var(--brand-900);padding:72px 40px}
+.offer-label{color:rgba(255,255,255,.5);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+.offer-h2{font-size:38px;font-weight:800;color:#fff;letter-spacing:-1px;line-height:1.15;margin-bottom:14px}
+.offer-sub{font-size:16px;color:rgba(255,255,255,.78);line-height:1.7;max-width:540px;margin-bottom:40px}
+.offer-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.offer-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:32px 28px;text-align:center}
+.offer-val{font-size:42px;font-weight:900;color:#fff;letter-spacing:-1px;line-height:1}
+.offer-val .unit{font-size:22px;font-weight:700}
+.offer-lbl{font-size:13px;font-weight:600;color:rgba(255,255,255,.72);letter-spacing:.5px;text-transform:uppercase;margin-top:8px}
+.offer-note{font-size:14px;color:rgba(255,255,255,.65);margin-top:28px;text-align:center;line-height:1.7}
+
+/* ── SCOPE ── */
+.scope-section{background:var(--brand-faint)}
+.scope-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.scope-card{background:#fff;border:1px solid var(--gray-light);border-radius:14px;padding:28px 24px;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.scope-icon{width:44px;height:44px;border-radius:12px;background:var(--brand-pale);display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:16px}
+.scope-title{font-size:16px;font-weight:700;color:var(--brand-dark);margin-bottom:10px}
+.scope-list{list-style:none;display:flex;flex-direction:column;gap:8px}
+.scope-list li{font-size:14px;color:var(--gray);line-height:1.5;display:flex;gap:8px}
+.scope-list li::before{content:'→';color:var(--brand-accent);font-weight:800;flex-shrink:0}
+
+/* ── LOCATIONS ── */
+.locations-section{background:#fff}
+.location-grid{display:flex;flex-wrap:wrap;gap:16px;margin-top:36px}
+.location-card{background:#fff;border:1.5px solid var(--gray-light);border-radius:12px;padding:20px 28px;display:flex;align-items:center;gap:16px;flex:1;min-width:180px;box-shadow:0 2px 8px rgba(0,0,0,.04);transition:border-color .2s,box-shadow .2s}
+.location-card:hover{border-color:var(--brand-accent);box-shadow:0 4px 16px rgba(var(--brand-rgb),.12)}
+.loc-pin{width:44px;height:44px;border-radius:50%;background:var(--brand-pale);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.loc-name{font-size:17px;font-weight:700;color:var(--brand-dark)}
+.loc-sub{font-size:13px;font-weight:600;color:var(--brand-accent);margin-top:2px}
+.location-note{margin-top:24px;padding:16px 20px;background:rgba(var(--brand-rgb),.05);border:1px solid rgba(var(--brand-rgb),.14);border-radius:10px;font-size:14px;color:var(--body);font-weight:500;display:flex;align-items:center;gap:8px}
+
+/* ── WEEK ── */
+.week-section{background:var(--brand-faint)}
+.week-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:40px}
+.week-card{background:#fff;border:1px solid var(--gray-light);border-radius:14px;padding:28px;display:flex;gap:18px;align-items:flex-start;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.week-icon{width:48px;height:48px;border-radius:14px;background:var(--brand-pale);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+.week-title{font-size:17px;font-weight:700;color:var(--brand-dark);margin-bottom:8px}
+.week-desc{font-size:14px;color:var(--gray);line-height:1.65}
+
+/* ── REQUIREMENTS ── */
+.reqs-section{background:#fff}
+.reqs-split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-top:40px}
+.req-list{display:flex;flex-direction:column;gap:14px}
+.req-item{display:flex;align-items:flex-start;gap:14px;padding:16px 20px;background:var(--gray-faint);border:1px solid var(--gray-light);border-radius:10px}
+.req-check{width:26px;height:26px;border-radius:50%;background:var(--brand-success);display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:700;flex-shrink:0;margin-top:1px}
+.req-text{font-size:15px;color:var(--body);font-weight:500;line-height:1.5}
+.reqs-callout{background:var(--brand-900);border-radius:16px;padding:36px 32px;position:sticky;top:80px}
+.reqs-callout h3{font-size:22px;font-weight:800;color:#fff;margin-bottom:12px;letter-spacing:-.5px}
+.reqs-callout p{font-size:14px;color:rgba(255,255,255,.78);line-height:1.75;margin-bottom:24px}
+.reqs-stat{display:flex;align-items:center;gap:14px;padding:14px 0;border-top:1px solid rgba(255,255,255,.1)}
+.reqs-stat-val{font-size:26px;font-weight:900;color:#fff;min-width:60px}
+.reqs-stat-label{font-size:13px;color:rgba(255,255,255,.72);font-weight:500}
+
+/* ── FOOTER ── */
+footer{background:var(--brand-950);padding:40px 40px 28px;border-top:1px solid rgba(255,255,255,.06)}
+.footer-top{display:flex;justify-content:space-between;align-items:center;padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:20px;flex-wrap:wrap;gap:20px}
+.footer-contact{display:flex;gap:28px;align-items:center}
+.footer-contact a{color:rgba(255,255,255,.78);font-size:14px;text-decoration:none;transition:color .2s}
+.footer-contact a:hover{color:#fff}
+.footer-bottom{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px}
+.footer-copy{font-size:12px;color:rgba(255,255,255,.42);line-height:1.7}
+.footer-links{display:flex;gap:20px}
+.footer-links a{color:rgba(255,255,255,.55);font-size:12px}
+.footer-links a:hover{color:rgba(255,255,255,.6)}
+
+/* ── MOBILE ── */
+@media(max-width:900px){.hero-layout{grid-template-columns:1fr;gap:32px}.msf-card{max-width:100%}.hero h1{font-size:32px}}
+@media(max-width:768px){
+  .nav{padding:0 20px}.hero{padding:40px 20px 48px}.hero h1{letter-spacing:-0.5px}
+  .hero-stats{flex-direction:row;width:100%}.hero-stat{flex:1;padding:10px 6px;border-right:1px solid rgba(255,255,255,.1);border-bottom:none;text-align:center}.hero-stat:last-child{border-right:none}
+  .hero-stat-val{font-size:19px}.hero-stat-val .unit{font-size:13px}.hero-stat-label{font-size:9px;letter-spacing:.3px}
+  .trust-bar{padding:14px 20px;gap:20px}.section{padding:52px 20px}.section-h2{font-size:28px}
+  .offer-section{padding:52px 20px}.offer-h2{font-size:28px}.offer-cards{grid-template-columns:1fr}
+  .scope-grid{grid-template-columns:1fr}.week-grid{grid-template-columns:1fr}.reqs-split{grid-template-columns:1fr}
+  .reqs-callout{position:static}.intro-box{padding:28px 24px}.footer-top{flex-direction:column;align-items:flex-start}.footer-bottom{flex-direction:column}
+}
+</style>
+
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div>
+    <img src="https://www.fiaconcleaningservices.com.au/wp-content/uploads/2021/09/logo.svg" alt="Fiacon Cleaning Services" style="height:38px;filter:brightness(0) invert(1)">
+  </div>
+  <a href="#hero-form" class="nav-cta">Apply Now →</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero-form">
+  <div class="hero-layout">
+    <div class="hero-left">
+      <div class="hero-badge"><span class="dot"></span>We Are Hiring</div>
+      <h1>We're Hiring:<br><span class="highlight">Commercial Cleaning Contractor</span></h1>
+      <div class="hero-location">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Canberra · Queanbeyan · Hall · Mugga · Mitchell
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-val">$40+GST</div>
+          <div class="hero-stat-label">Per Hour</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-val">11</div>
+          <div class="hero-stat-label">Sites</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-val">54.5</div>
+          <div class="hero-stat-label">Hrs/Week</div>
+        </div>
+      </div>
+      <div class="hero-trust">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        30+ years in business · Australian-owned
+      </div>
+    </div>
+
+    <!-- MULTI-STEP FORM -->
+    <div class="msf-card">
+      <div class="msf-progress" id="msf-progress">
+        <div class="msf-step-dot active" id="dot1">1</div>
+        <div class="msf-step-line pending" id="line1"></div>
+        <div class="msf-step-dot pending" id="dot2">2</div>
+        <div class="msf-step-line pending" id="line2"></div>
+        <div class="msf-step-dot pending" id="dot3">3</div>
+      </div>
+      <div class="msf-step-label" id="msf-step-label">Step 1 of 3 — Your Details</div>
+
+      <!-- STEP 1: Contact details -->
+      <div class="msf-step active" id="msf1">
+        <div class="msf-step-title">Let's start with your details</div>
+        <div class="msf-step-sub">Takes 60 seconds. No CV required.</div>
+        <form onsubmit="msfNext(event, 1)">
+          <input type="text" name="msf_name" class="msf-input" placeholder="Your Name" required>
+          <input type="tel" name="msf_phone" id="msf_phone" class="msf-input" placeholder="Mobile Number" inputmode="tel" required autocomplete="tel">
+          <div id="phone-error" style="display:none;color:#DC2626;font-size:12px;font-weight:600;margin-top:-8px;margin-bottom:8px;">⚠️ Please enter a valid Australian phone number.</div>
+          <input type="email" name="msf_email" class="msf-input" placeholder="Email Address" required>
+          <button type="submit" class="msf-btn">Next →</button>
+        </form>
+        <div class="msf-trust">🔒 Your details are safe and secure.</div>
+      </div>
+
+      <!-- STEP 2: Screening questions 1–3 (dynamic) -->
+      <div class="msf-step" id="msf2">
+        <div class="msf-step-title">Quick qualifying questions</div>
+        <div class="msf-step-sub">2 questions — just click your answer.</div>
+        <form onsubmit="msfNext(event, 2)">
+          <div class="msf-q">
+            <div class="msf-q-label">Are you registered as a Pty Ltd?</div>
+            <div class="msf-opts" data-field="sq_1">
+              <label class="msf-opt"><input type="radio" name="sq_1" value="Yes"> Yes</label>
+              <label class="msf-opt"><input type="radio" name="sq_1" value="No — but I can register"> No — but I can register</label>
+            </div>
+          </div>
+          <div class="msf-q">
+            <div class="msf-q-label">Do you hold Public Liability insurance?</div>
+            <div class="msf-opts" data-field="sq_2">
+              <label class="msf-opt"><input type="radio" name="sq_2" value="Yes"> Yes</label>
+              <label class="msf-opt"><input type="radio" name="sq_2" value="No — but I can get it"> No — but I can get it</label>
+            </div>
+          </div>
+          <button type="submit" class="msf-btn">Next → Final Step</button>
+        </form>
+      </div>
+
+      <!-- STEP 3: Screening questions 4–5 + open text (dynamic) -->
+      <div class="msf-step" id="msf3">
+        <div class="msf-step-title">Almost there</div>
+        <div class="msf-step-sub">0 more questions and a quick note.</div>
+        <form onsubmit="msfSubmit(event)">
+          
+          <div class="msf-q">
+            <div class="msf-q-label">Briefly describe your commercial cleaning experience</div>
+            <textarea name="m3_experience" class="msf-textarea" placeholder="e.g. 5 years cleaning offices across Canberra with a team of 3..." required></textarea>
+          </div>
+          <button type="submit" class="msf-btn">Submit Application →</button>
+        </form>
+      </div>
+
+      <!-- SUCCESS -->
+      <div class="msf-step msf-success" id="msf-success">
+        <div class="msf-success-icon">✅</div>
+        <div class="msf-success-title">Application Submitted!</div>
+        <div class="msf-success-sub">Jake will be in touch shortly on <strong id="msf-success-phone"></strong>.<br>Keep an eye on your inbox too.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item"><div class="trust-icon">🏢</div>11 Commercial Sites Ready</div>
+  <div class="trust-item"><div class="trust-icon">⏰</div>Consistent Weekly Schedule</div>
+  <div class="trust-item"><div class="trust-icon">🇦🇺</div>Australian-Owned, 30+ Years</div>
+  <div class="trust-item"><div class="trust-icon">🤝</div>Long-Term Partnership</div>
+  
+</div>
+
+<!-- INTRO -->
+<section class="section intro-section">
+  <div class="section-inner">
+    <div class="section-label">About This Opportunity</div>
+    <h2 class="section-h2">A Stable, Ongoing Partnership
+in the Canberra Region</h2>
+    <div class="intro-box">
+      <p>Fiacon Facility Services is a proudly Australian-owned company with over 30 years of trusted service delivering commercial cleaning across Australia. We're seeking a reliable and professional cleaning contractor to partner with us and service 11 established sites across the Canberra region. If you take pride in your work, communicate well, and deliver consistent, high-quality results — we want to hear from you.</p>
+    </div>
+    <div class="section-cta"><a href="#hero-form" class="btn-primary">Apply Now →</a></div>
+  </div>
+</section>
+
+<!-- WHAT WE OFFER -->
+<section class="offer-section">
+  <div class="section-inner">
+    <div class="offer-label">What You'll Earn</div>
+    <h2 class="offer-h2">Steady, Predictable Income</h2>
+    <p class="offer-sub">Consistent weekly work across 11 commercial sites — no chasing leads, no quiet periods.</p>
+    <div class="offer-cards">
+      <div class="offer-card">
+        <div class="offer-val">$40+GST</div>
+        <div class="offer-lbl">Per Hour Rate</div>
+      </div>
+      <div class="offer-card">
+        <div class="offer-val">11</div>
+        <div class="offer-lbl">Established Sites</div>
+      </div>
+      <div class="offer-card">
+        <div class="offer-val">54.5</div>
+        <div class="offer-lbl">Hours / Week</div>
+      </div>
+    </div>
+    <p class="offer-note">Ongoing, consistent work with a trusted Australian company.
+Detailed scope of works provided for every site at onboarding.</p>
+  </div>
+</section>
+
+<!-- SCOPE OF WORK -->
+<section class="section scope-section">
+  <div class="section-inner">
+    <div class="section-label">What You'll Be Cleaning</div>
+    <h2 class="section-h2">Scope of Work</h2>
+    <p class="section-sub">Commercial cleaning across offices, lunchrooms, and amenities. Every site comes with a detailed scope document at onboarding.</p>
+    <div class="scope-grid">
+      <div class="scope-card">
+        <div class="scope-icon">🧹</div>
+        <div class="scope-title">General Cleaning</div>
+        <ul class="scope-list">
+          <li>Vacuuming, mopping, dusting</li>
+          <li>Offices, kitchens & lunchrooms</li>
+          <li>Amenities and common areas</li>
+          <li>Waste removal at each site</li>
+        </ul>
+      </div>
+      <div class="scope-card">
+        <div class="scope-icon">🕐</div>
+        <div class="scope-title">Working Hours</div>
+        <ul class="scope-list">
+          <li>All sites are key-access jobs</li>
+          <li>After-hours cleaning (6PM–6AM)</li>
+          <li>Daytime cleaning available too</li>
+          <li>Flexible to suit your schedule</li>
+        </ul>
+      </div>
+      <div class="scope-card">
+        <div class="scope-icon">📋</div>
+        <div class="scope-title">Cleaning Schedule</div>
+        <ul class="scope-list">
+          <li>1 to 3 cleans per week per site</li>
+          <li>Each clean: approx. 2–3.5 hours</li>
+          <li>54.5 hours of total weekly work</li>
+          <li>One-off jobs quoted separately</li>
+        </ul>
+      </div>
+    </div>
+    <div class="section-cta"><a href="#hero-form" class="btn-primary">Apply Now →</a></div>
+  </div>
+</section>
+
+<!-- LOCATIONS -->
+<section class="section locations-section">
+  <div class="section-inner">
+    <div class="section-label">Where You'll Work</div>
+    <h2 class="section-h2">5 Locations Across the Region</h2>
+    <p class="section-sub">All sites serviced on a routine weekly basis with consistent, predictable scheduling.</p>
+    <div class="location-grid">
+      <div class="location-card">
+        <div class="loc-pin">📍</div>
+        <div>
+          <div class="loc-name">Canberra</div>
+          <div class="loc-sub">2 sites</div>
+        </div>
+      </div>
+      <div class="location-card">
+        <div class="loc-pin">📍</div>
+        <div>
+          <div class="loc-name">Queanbeyan</div>
+          <div class="loc-sub">3 sites</div>
+        </div>
+      </div>
+      <div class="location-card">
+        <div class="loc-pin">📍</div>
+        <div>
+          <div class="loc-name">Hall</div>
+          <div class="loc-sub">1 site</div>
+        </div>
+      </div>
+      <div class="location-card">
+        <div class="loc-pin">📍</div>
+        <div>
+          <div class="loc-name">Mugga</div>
+          <div class="loc-sub">4 sites</div>
+        </div>
+      </div>
+      <div class="location-card">
+        <div class="loc-pin">📍</div>
+        <div>
+          <div class="loc-name">Mitchell</div>
+          <div class="loc-sub">1 site</div>
+        </div>
+      </div>
+    </div>
+    <div class="location-note">ℹ️ All 11 sites are cleaned on a routine weekly basis with consistent scheduling.</div>
+    <div class="section-cta"><a href="#hero-form" class="btn-primary">Apply Now →</a></div>
+  </div>
+</section>
+
+<!-- WHAT YOUR WEEK LOOKS LIKE -->
+<section class="section week-section">
+  <div class="section-inner">
+    <div class="section-label">Day-to-Day</div>
+    <h2 class="section-h2">What Your Week Looks Like</h2>
+    <p class="section-sub">Predictable. Consistent. Built around your operation.</p>
+    <div class="week-grid">
+      <div class="week-card">
+        <div class="week-icon">🗓️</div>
+        <div>
+          <div class="week-title">Consistent Routine</div>
+          <div class="week-desc">Service 11 commercial sites across the Canberra region on a set weekly schedule — no guessing, no gaps.</div>
+        </div>
+      </div>
+      <div class="week-card">
+        <div class="week-icon">🌙</div>
+        <div>
+          <div class="week-title">Flexible Hours</div>
+          <div class="week-desc">All sites are key-access, so you clean after hours or during the day — whatever works for your operation.</div>
+        </div>
+      </div>
+      <div class="week-card">
+        <div class="week-icon">⏱️</div>
+        <div>
+          <div class="week-title">54.5 Hours Per Week</div>
+          <div class="week-desc">Each site requires 2–3.5 hours per clean, with frequencies of 1–3 times per week. Steady, predictable workload.</div>
+        </div>
+      </div>
+      <div class="week-card">
+        <div class="week-icon">🤝</div>
+        <div>
+          <div class="week-title">Long-Term Partnership</div>
+          <div class="week-desc">We're not looking for a quick fix. We want a contractor who takes pride in their work and grows with us.</div>
+        </div>
+      </div>
+    </div>
+    <div class="section-cta"><a href="#hero-form" class="btn-primary">Apply Now →</a></div>
+  </div>
+</section>
+
+<!-- REQUIREMENTS -->
+<section class="section reqs-section">
+  <div class="section-inner-wide">
+    <div class="section-label">Are You the Right Fit?</div>
+    <h2 class="section-h2">What We're Looking For</h2>
+    <div class="reqs-split">
+      <div class="req-list">
+        <div class="req-item">
+          <div class="req-check">✓</div>
+          <div class="req-text">Registered Pty Ltd — or willing to transition</div>
+        </div>
+        <div class="req-item">
+          <div class="req-check">✓</div>
+          <div class="req-text">Current Public Liability and Workers Compensation insurance</div>
+        </div>
+        <div class="req-item">
+          <div class="req-check">✓</div>
+          <div class="req-text">Proven commercial cleaning experience</div>
+        </div>
+        <div class="req-item">
+          <div class="req-check">✓</div>
+          <div class="req-text">Ability to read and write English</div>
+        </div>
+        <div class="req-item">
+          <div class="req-check">✓</div>
+          <div class="req-text">Strong communication — phone, text, email, and WhatsApp</div>
+        </div>
+        <div class="req-item">
+          <div class="req-check">✓</div>
+          <div class="req-text">Supply all cleaning equipment and consumables</div>
+        </div>
+      </div>
+      <div class="reqs-callout">
+        <h3>Tick all six boxes?</h3>
+        <p>We're looking for one reliable partner to take on all 11 sites — ongoing, long-term work.</p>
+        <div class="reqs-stat">
+          <div class="reqs-stat-val">11</div>
+          <div class="reqs-stat-label">Commercial sites ready to handover</div>
+        </div>
+        <div class="reqs-stat">
+          <div class="reqs-stat-val">$40</div>
+          <div class="reqs-stat-label">Per hour + GST, consistent weekly billing</div>
+        </div>
+        <div class="reqs-stat">
+          <div class="reqs-stat-val">30+</div>
+          <div class="reqs-stat-label">Years in business — we're not going anywhere</div>
+        </div>
+        <div style="margin-top:28px">
+          <a href="#hero-form" class="btn-primary" style="display:block;text-align:center;padding:16px">Apply Now →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div><img src="https://www.fiaconcleaningservices.com.au/wp-content/uploads/2021/09/logo.svg" alt="Fiacon Cleaning Services" style="height:32px;filter:brightness(0) invert(1);opacity:.85"></div>
+    <div class="footer-contact">
+      <a href="mailto:Jake.g@fiacon.com.au">📧 Jake.g@fiacon.com.au</a>
+      <a href="tel:0432400758">📞 0432400758</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">
+      Copyright © 2026 Fiacon Facility Services Pty Ltd – All Rights Reserved.<br>
+      This site is not a part of the Facebook™ website or Facebook™ Inc. FACEBOOK™ is a trademark of FACEBOOK™, Inc.
+    </div>
+    <div class="footer-links">
+      <a href="/legal#terms">Terms &amp; Conditions</a>
+      <a href="/legal#privacy">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── CONFIG (injected at build time) ───────────────────────────────────────────
+const SITE_CONFIG = {"step2Questions": [{"fieldName": "sq_1"}, {"fieldName": "sq_2"}], "step3Questions": []};
+
+let msfData = {}
+
+// Phone validation
+function validatePhone(val) {
+  const stripped = val.replace(/[\s\-\(\)\.]/g, '')
+  const normalised = stripped.replace(/^\+61/, '0')
+  // AU numbers
+  if (/^0[2-9]\d{8}$/.test(normalised)) return true
+  // US numbers (10 digits, area code not starting with 0 or 1)
+  if (/^[2-9]\d{9}$/.test(stripped.replace(/^\+1/, ''))) return true
+  return false
+}
+
+// Phone auto-format
+const phoneInput = document.getElementById('msf_phone')
+if (phoneInput) {
+  phoneInput.addEventListener('input', function() {
+    let v = this.value.replace(/\D/g, '').substring(0, 10)
+    if (v.length > 4 && v.length <= 7) v = v.slice(0,4) + ' ' + v.slice(4)
+    else if (v.length > 7) v = v.slice(0,4) + ' ' + v.slice(4,7) + ' ' + v.slice(7)
+    this.value = v
+    document.getElementById('phone-error').style.display = 'none'
+    this.style.borderColor = ''
+  })
+}
+
+function updateProgress(step) {
+  const labels = ['Step 1 of 3 — Your Details', 'Step 2 of 3 — Qualifying Questions', 'Step 3 of 3 — Final Details']
+  document.getElementById('msf-step-label').textContent = labels[step - 1] || ''
+  for (let i = 1; i <= 3; i++) {
+    const dot = document.getElementById('dot' + i)
+    if (i < step) { dot.className = 'msf-step-dot done'; dot.textContent = '✓' }
+    else if (i === step) { dot.className = 'msf-step-dot active'; dot.textContent = i }
+    else { dot.className = 'msf-step-dot pending'; dot.textContent = i }
+  }
+  for (let i = 1; i <= 2; i++) {
+    const line = document.getElementById('line' + i)
+    line.className = 'msf-step-line ' + (i < step ? 'done' : 'pending')
+  }
+}
+
+function showStep(n) {
+  document.querySelectorAll('.msf-step').forEach(s => s.classList.remove('active'))
+  const el = document.getElementById('msf' + n) || document.getElementById('msf-success')
+  if (el) el.classList.add('active')
+}
+
+function collectRadios(form, fieldNames) {
+  for (const name of fieldNames) {
+    if (!form.querySelector(`input[name="${name}"]:checked`)) {
+      alert('Please answer all questions before continuing.')
+      return false
+    }
+  }
+  return true
+}
+
+function msfNext(e, step) {
+  e.preventDefault()
+  const form = e.target
+
+  if (step === 1) {
+    const phoneVal = form.msf_phone.value
+    if (!validatePhone(phoneVal)) {
+      document.getElementById('phone-error').style.display = 'block'
+      form.msf_phone.style.borderColor = '#DC2626'
+      form.msf_phone.focus()
+      return
+    }
+    msfData.business_name = form.msf_name.value
+    msfData.phone = phoneVal
+    msfData.email = form.msf_email.value
+    updateProgress(2)
+    showStep(2)
+  } else if (step === 2) {
+    const step2Fields = SITE_CONFIG.step2Questions.map(q => q.fieldName)
+    if (!collectRadios(form, step2Fields)) return
+    step2Fields.forEach(name => {
+      msfData[name] = form.querySelector(`input[name="${name}"]:checked`)?.value || ''
+    })
+    updateProgress(3)
+    showStep(3)
+  }
+  document.querySelector('.msf-card').scrollIntoView({behavior:'smooth', block:'nearest'})
+}
+
+function msfSubmit(e) {
+  e.preventDefault()
+  const form = e.target
+  const step3Fields = SITE_CONFIG.step3Questions.map(q => q.fieldName)
+  if (!collectRadios(form, step3Fields)) return
+  step3Fields.forEach(name => {
+    msfData[name] = form.querySelector(`input[name="${name}"]:checked`)?.value || ''
+  })
+  msfData.experience = form.m3_experience.value
+  msfData.step = 'full-application'
+
+  document.getElementById('msf-success-phone').textContent = msfData.phone
+
+  // 1. Sheets proxy
+  msfData.role_path = 'canberra'
+  fetch('/canberra/api/sheets', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(msfData) }).catch(()=>{})
+  // 2. GHL contact + notification
+  fetch('/canberra/api/ghl', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(msfData) }).catch(()=>{})
+
+  // Redirect to thank you page
+  window.location.href = window.location.pathname.replace(/\/+$/, '') + '/thank-you'
+}
+
+// Radio interactivity
+document.querySelectorAll('.msf-opts').forEach(group => {
+  group.querySelectorAll('.msf-opt').forEach(opt => {
+    opt.addEventListener('click', () => {
+      group.querySelectorAll('.msf-opt').forEach(o => o.classList.remove('selected'))
+      opt.classList.add('selected')
+      opt.querySelector('input').checked = true
+    })
+  })
+})
+</script>
+
+<!-- Valiant Feedback Layer -->
+<script>
+  window.FEEDBACK_CONFIG = {
+    supabaseUrl: 'https://okwxnyqhoflvznxdrwfm.supabase.co',
+    supabaseKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9rd3hueXFob2ZsdnpueGRyd2ZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUyNzgzODIsImV4cCI6MjA5MDg1NDM4Mn0.1mNrVIOl2Kt0fFdhpI6r9vUc6abdpu_g-YPar99UFkE',
+    pageId: 'canberra',
+    clientTokens: ['fiacon']
+  }
+</script>
+<script src="/feedback.js"></script>
+</body>
+</html>

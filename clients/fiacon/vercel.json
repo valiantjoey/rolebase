@@ -1,0 +1,20 @@
+{
+  "rewrites": [
+    {
+      "source": "/canberra/thank-you",
+      "destination": "/canberra/thankyou.html"
+    },
+    {
+      "source": "/canberra",
+      "destination": "/canberra/index.html"
+    },
+    {
+      "source": "/narellan/thank-you",
+      "destination": "/narellan/thankyou.html"
+    },
+    {
+      "source": "/narellan",
+      "destination": "/narellan/index.html"
+    }
+  ]
+}
