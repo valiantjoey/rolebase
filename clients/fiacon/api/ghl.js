@@ -10,7 +10,8 @@ export default async function handler(req, res) {
 
   if (!GHL_TOKEN) return res.status(500).json({ error: 'No GHL token configured' })
 
-  const nameParts = (body.business_name || '').trim().split(' ')
+  // Landing page posts the applicant's name as `name`
+  const nameParts = (body.name || body.business_name || '').trim().split(' ')
   const firstName = nameParts[0] || ''
   const lastName = nameParts.slice(1).join(' ') || ''
 

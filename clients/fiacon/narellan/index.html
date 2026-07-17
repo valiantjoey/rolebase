@@ -3,59 +3,88 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="noindex, nofollow">
-<title>Fiacon Cleaning Services — Part Time Cleaner Wanted | Narellan</title>
+<title>Fiacon — 4x Part Time Cleaners Wanted | Narellan</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 :root{
-  /* ── Brand palette (derived by colour intelligence) ── */
-  --brand-primary:   #0F2D5E;
-  --brand-secondary: #DC2626;
-  --brand-950:       #0e131a;   /* footer bg */
-  --brand-900:       #203250;   /* nav, coloured sections */
-  --brand-mid:       #1d3b6d;   /* gradient middle stop */
-  --brand-dark:      #142033;  /* headlines, card titles */
-  --brand-accent:    #0f2c5c;/* labels, borders, list markers */
-  --brand-success:   #1daa51;/* done dots, checkmarks */
-  --brand-highlight: #a6bfe7;/* hero h1 highlight word */
-  --brand-pale:      #e2e7ee;  /* icon bg tints */
-  --brand-faint:     #f6f7f9; /* subtle section backgrounds */
-  --brand-cta:       #0f2c5c;   /* CTA button bg on white */
-  --brand-cta-text:  #ffffff;/* CTA button text */
-  --brand-nav-cta:   #ffffff;/* nav button bg */
-  --brand-nav-cta-text: #203250;/* nav button text */
-  --brand-rgb:       15,45,94; /* for rgba() usage */
-  /* ── Neutrals (always fixed) ── */
-  --body:       #1A1A2A;
-  --gray:       #6B7280;
-  --gray-light: #E5E7EB;
-  --gray-faint: #F9FAFB;
-  --white:      #FFFFFF;
-  --red:        #DC2626;
+  --navy:#0F2D5E;
+  --navy-mid:#1A3C73;
+  --blue:#1A6FE8;
+  --blue-pale:#EBF2FF;
+  --blue-faint:#F0F6FF;
+  --green:#16A34A;
+  --body:#1A1A2A;
+  --gray:#6B7280;
+  --gray-light:#E5E7EB;
+  --gray-faint:#F9FAFB;
+  --white:#FFFFFF;
+  --red:#DC2626;
 }
 body{font-family:'Inter',sans-serif;color:var(--body);background:var(--white);overflow-x:hidden;font-size:16px;line-height:1.6}
 img{max-width:100%}
 a{text-decoration:none}
 
 /* ── NAV ── */
-.nav{background:var(--brand-900);height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 40px;position:sticky;top:0;z-index:200;box-shadow:0 2px 20px rgba(0,0,0,.35)}
-.nav-cta{background:var(--brand-nav-cta);color:var(--brand-nav-cta-text);font-family:'Inter',sans-serif;font-size:14px;font-weight:700;padding:10px 22px;border-radius:6px;border:none;cursor:pointer;transition:opacity .2s;letter-spacing:.3px;text-decoration:none}
-.nav-cta:hover{opacity:.85}
+.nav{
+  background:var(--navy);height:64px;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 40px;position:sticky;top:0;z-index:200;
+  box-shadow:0 2px 16px rgba(0,0,0,.25)
+}
+.nav-cta{
+  background:var(--blue);color:#fff;font-family:'Inter',sans-serif;
+  font-size:14px;font-weight:700;padding:10px 22px;border-radius:6px;
+  border:none;cursor:pointer;transition:background .2s;letter-spacing:.3px;
+  text-decoration:none
+}
+.nav-cta:hover{background:#1558c0}
 
 /* ── HERO ── */
-.hero{background:linear-gradient(140deg,var(--brand-900) 0%,var(--brand-dark) 100%);padding:56px 40px 60px;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='600' height='600' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='500' cy='100' r='350' fill='rgba(255,255,255,0.025)'/%3E%3Ccircle cx='100' cy='500' r='250' fill='rgba(255,255,255,0.02)'/%3E%3C/svg%3E") no-repeat right top;pointer-events:none}
-.hero-layout{max-width:1100px;margin:0 auto;position:relative;z-index:1;display:grid;grid-template-columns:1fr 420px;gap:56px;align-items:center}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:7px 18px;font-size:11px;font-weight:700;color:#fff;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:20px}
-.hero-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--brand-highlight);animation:pulse 2s infinite}
+.hero{
+  background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 60%,#1A4A8A 100%);
+  padding:56px 40px 60px;position:relative;overflow:hidden
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:url("data:image/svg+xml,%3Csvg width='600' height='600' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='500' cy='100' r='350' fill='rgba(255,255,255,0.025)'/%3E%3Ccircle cx='100' cy='500' r='250' fill='rgba(255,255,255,0.02)'/%3E%3C/svg%3E") no-repeat right top;
+  pointer-events:none
+}
+.hero-layout{
+  max-width:1100px;margin:0 auto;position:relative;z-index:1;
+  display:grid;grid-template-columns:1fr 420px;gap:56px;align-items:center
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);
+  border-radius:999px;padding:7px 18px;
+  font-size:11px;font-weight:700;color:#fff;letter-spacing:1.5px;
+  text-transform:uppercase;margin-bottom:20px
+}
+.hero-badge .dot{
+  width:8px;height:8px;border-radius:50%;background:#22C55E;
+  animation:pulse 2s infinite
+}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-.hero h1{font-size:46px;font-weight:900;color:#fff;line-height:1.05;letter-spacing:-1.5px;margin-bottom:12px}
-.hero h1 .highlight{color:var(--brand-highlight)}
-.hero-location{font-size:15px;font-weight:600;color:rgba(255,255,255,.65);letter-spacing:.3px;margin-bottom:28px;display:flex;align-items:center;gap:8px}
-.hero-stats{display:flex;gap:0;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:12px;overflow:hidden;width:fit-content;margin-bottom:24px}
-.hero-stat{padding:16px 28px;text-align:center;border-right:1px solid rgba(255,255,255,.1)}
+.hero h1{
+  font-size:46px;font-weight:900;color:#fff;
+  line-height:1.05;letter-spacing:-1.5px;margin-bottom:12px
+}
+.hero h1 .highlight{color:#60A5FA}
+.hero-location{
+  font-size:15px;font-weight:600;color:rgba(255,255,255,.65);
+  letter-spacing:.3px;margin-bottom:28px;display:flex;align-items:center;gap:8px
+}
+.hero-stats{
+  display:flex;gap:0;
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);
+  border-radius:12px;overflow:hidden;width:fit-content;margin-bottom:24px
+}
+.hero-stat{
+  padding:16px 28px;text-align:center;
+  border-right:1px solid rgba(255,255,255,.1)
+}
 .hero-stat:last-child{border-right:none}
 .hero-stat-val{font-size:28px;font-weight:900;color:#fff;letter-spacing:-1px;line-height:1}
 .hero-stat-val .unit{font-size:16px;font-weight:700}
@@ -63,101 +92,147 @@ a{text-decoration:none}
 .hero-trust{font-size:13px;color:rgba(255,255,255,.45);display:flex;align-items:center;gap:6px}
 .hero-trust span{color:rgba(255,255,255,.65)}
 
-/* ── MULTI-STEP FORM ── */
-.msf-card{background:#fff;border-radius:20px;padding:32px 28px;box-shadow:0 12px 48px rgba(0,0,0,.3);position:relative}
-.msf-progress{display:flex;align-items:center;gap:0;margin-bottom:24px}
-.msf-step-dot{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;transition:all .3s}
-.msf-step-dot.done{background:var(--brand-success);color:#fff}
-.msf-step-dot.active{background:var(--brand-900);color:#fff}
+/* ── MULTI-STEP FORM CARD ── */
+.msf-card{
+  background:#fff;border-radius:20px;padding:32px 28px;
+  box-shadow:0 12px 48px rgba(0,0,0,.3);position:relative
+}
+
+/* Progress */
+.msf-progress{
+  display:flex;align-items:center;gap:0;margin-bottom:24px
+}
+.msf-step-dot{
+  width:28px;height:28px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:12px;font-weight:700;flex-shrink:0;
+  transition:all .3s
+}
+.msf-step-dot.done{background:var(--green);color:#fff}
+.msf-step-dot.active{background:var(--blue);color:#fff}
 .msf-step-dot.pending{background:var(--gray-light);color:var(--gray)}
 .msf-step-line{flex:1;height:2px;transition:background .3s}
-.msf-step-line.done{background:var(--brand-success)}
+.msf-step-line.done{background:var(--green)}
 .msf-step-line.pending{background:var(--gray-light)}
 .msf-step-label{font-size:11px;color:var(--gray);text-align:center;margin-bottom:20px;font-weight:500}
+
+/* Steps */
 .msf-step{display:none}
 .msf-step.active{display:block}
-.msf-step-title{font-size:18px;font-weight:800;color:var(--brand-dark);margin-bottom:4px;letter-spacing:-.3px}
+.msf-step-title{font-size:18px;font-weight:800;color:var(--navy);margin-bottom:4px;letter-spacing:-.3px}
 .msf-step-sub{font-size:13px;color:var(--gray);margin-bottom:20px}
-.msf-input{width:100%;padding:12px 14px;border:1.5px solid var(--gray-light);border-radius:8px;font-family:'Inter',sans-serif;font-size:15px;color:var(--body);outline:none;transition:border-color .2s;margin-bottom:12px}
-.msf-input:focus{border-color:var(--brand-accent);box-shadow:0 0 0 3px rgba(var(--brand-rgb),.12)}
+
+.msf-input{
+  width:100%;padding:12px 14px;border:1.5px solid var(--gray-light);
+  border-radius:8px;font-family:'Inter',sans-serif;font-size:15px;color:var(--body);
+  outline:none;transition:border-color .2s;margin-bottom:12px
+}
+.msf-input:focus{border-color:var(--blue)}
+
 .msf-q{margin-bottom:16px}
-.msf-q-label{font-size:13px;font-weight:600;color:var(--body);margin-bottom:8px}
+.msf-q-label{font-size:13px;font-weight:600;color:#374151;margin-bottom:8px}
 .msf-opts{display:flex;gap:8px;flex-wrap:wrap}
-.msf-opt{display:flex;align-items:center;gap:6px;background:var(--brand-faint);border:1.5px solid var(--gray-light);border-radius:8px;padding:8px 14px;cursor:pointer;font-size:13px;font-weight:500;transition:all .2s;user-select:none}
+.msf-opt{
+  display:flex;align-items:center;gap:6px;
+  background:var(--gray-faint);border:1.5px solid var(--gray-light);
+  border-radius:8px;padding:8px 14px;cursor:pointer;
+  font-size:13px;font-weight:500;transition:all .2s;user-select:none
+}
 .msf-opt input{display:none}
-.msf-opt.selected{background:rgba(var(--brand-rgb),.07);border-color:var(--brand-accent);color:var(--brand-dark)}
-.msf-textarea{width:100%;padding:12px 14px;border:1.5px solid var(--gray-light);border-radius:8px;font-family:'Inter',sans-serif;font-size:13px;color:var(--body);min-height:80px;resize:vertical;outline:none;transition:border-color .2s;margin-top:4px}
-.msf-textarea:focus{border-color:var(--brand-accent);box-shadow:0 0 0 3px rgba(var(--brand-rgb),.12)}
-.msf-btn{width:100%;background:var(--brand-900);color:#fff;font-family:'Inter',sans-serif;font-size:15px;font-weight:700;padding:14px;border-radius:8px;border:none;cursor:pointer;letter-spacing:.3px;transition:all .2s;margin-top:4px;box-shadow:0 4px 20px rgba(0,0,0,.25)}
-.msf-btn:hover{opacity:.88}
+.msf-opt.selected{background:var(--blue-pale);border-color:var(--blue);color:var(--navy)}
+.msf-textarea{
+  width:100%;padding:12px 14px;border:1.5px solid var(--gray-light);
+  border-radius:8px;font-family:'Inter',sans-serif;font-size:13px;
+  color:var(--body);min-height:80px;resize:vertical;outline:none;
+  transition:border-color .2s;margin-top:4px
+}
+.msf-textarea:focus{border-color:var(--blue)}
+
+.msf-btn{
+  width:100%;background:var(--blue);color:#fff;font-family:'Inter',sans-serif;
+  font-size:15px;font-weight:700;padding:14px;border-radius:8px;border:none;
+  cursor:pointer;letter-spacing:.3px;transition:all .2s;margin-top:4px;
+  box-shadow:0 4px 16px rgba(26,111,232,.35)
+}
+.msf-btn:hover{background:#1558c0}
 .msf-trust{font-size:11px;color:var(--gray);text-align:center;margin-top:10px}
+
+/* Success */
 .msf-success{text-align:center;padding:16px 0}
 .msf-success-icon{font-size:48px;margin-bottom:12px}
-.msf-success-title{font-size:22px;font-weight:800;color:var(--brand-dark);margin-bottom:8px}
+.msf-success-title{font-size:22px;font-weight:800;color:var(--navy);margin-bottom:8px}
 .msf-success-sub{font-size:14px;color:var(--gray);line-height:1.6}
 
 /* ── TRUST BAR ── */
-.trust-bar{background:var(--brand-faint);border-bottom:1px solid rgba(var(--brand-rgb),.1);padding:18px 40px;display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap}
-.trust-item{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;color:var(--brand-dark)}
-.trust-icon{width:32px;height:32px;border-radius:8px;background:rgba(var(--brand-rgb),.1);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.trust-bar{
+  background:#fff;border-bottom:1px solid #E5E7EB;
+  padding:18px 40px;display:flex;align-items:center;justify-content:center;
+  gap:48px;flex-wrap:wrap
+}
+.trust-item{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;color:var(--navy)}
+.trust-icon{
+  width:32px;height:32px;border-radius:8px;background:var(--blue-pale);
+  display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0
+}
 
-/* ── SHARED ── */
+/* ── SHARED SECTIONS ── */
 .section{padding:72px 40px}
 .section-inner{max-width:920px;margin:0 auto}
 .section-inner-wide{max-width:1080px;margin:0 auto}
-.section-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--brand-accent);margin-bottom:12px}
-.section-h2{font-size:38px;font-weight:800;color:var(--brand-dark);letter-spacing:-1px;line-height:1.15;margin-bottom:14px}
+.section-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--blue);margin-bottom:12px}
+.section-h2{font-size:38px;font-weight:800;color:var(--navy);letter-spacing:-1px;line-height:1.15;margin-bottom:14px}
 .section-sub{font-size:16px;color:var(--gray);line-height:1.7;max-width:620px}
-.btn-primary{background:var(--brand-900);color:#fff;font-family:'Inter',sans-serif;font-size:16px;font-weight:700;padding:16px 32px;border-radius:8px;border:none;cursor:pointer;transition:all .2s;letter-spacing:.3px;box-shadow:0 4px 20px rgba(0,0,0,.22);display:inline-block}
-.btn-primary:hover{opacity:.88;transform:translateY(-1px)}
-/* Button on dark brand backgrounds — invert to white */
-.reqs-callout .btn-primary{background:#fff;color:var(--brand-dark);box-shadow:0 4px 20px rgba(0,0,0,.2)}
-.offer-section .btn-primary{background:#fff;color:var(--brand-dark);box-shadow:0 4px 20px rgba(0,0,0,.2)}
-.section-cta{text-align:center;margin-top:36px}
+.btn-primary{
+  background:var(--blue);color:#fff;font-family:'Inter',sans-serif;
+  font-size:16px;font-weight:700;padding:16px 32px;border-radius:8px;
+  border:none;cursor:pointer;transition:all .2s;letter-spacing:.3px;
+  box-shadow:0 4px 20px rgba(26,111,232,.4);display:inline-block
+}
+.btn-primary:hover{background:#1558c0;transform:translateY(-1px)}
 
 /* ── INTRO ── */
 .intro-section{background:#fff}
-.intro-box{background:rgba(var(--brand-rgb),.05);border:1px solid rgba(var(--brand-rgb),.14);border-radius:16px;padding:40px 48px;margin-top:32px;border-left:5px solid var(--brand-accent)}
-.intro-box p{font-size:17px;color:var(--body);line-height:1.8}
+.intro-box{background:var(--blue-faint);border:1px solid #BFDBFE;border-radius:16px;padding:40px 48px;margin-top:32px;border-left:5px solid var(--blue)}
+.intro-box p{font-size:17px;color:#1E3A5F;line-height:1.8}
 
 /* ── OFFER ── */
-.offer-section{background:var(--brand-900);padding:72px 40px}
+.offer-section{background:var(--navy);padding:72px 40px}
 .offer-label{color:rgba(255,255,255,.5);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
 .offer-h2{font-size:38px;font-weight:800;color:#fff;letter-spacing:-1px;line-height:1.15;margin-bottom:14px}
-.offer-sub{font-size:16px;color:rgba(255,255,255,.78);line-height:1.7;max-width:540px;margin-bottom:40px}
+.offer-sub{font-size:16px;color:rgba(255,255,255,.6);line-height:1.7;max-width:540px;margin-bottom:40px}
 .offer-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .offer-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:32px 28px;text-align:center}
 .offer-val{font-size:42px;font-weight:900;color:#fff;letter-spacing:-1px;line-height:1}
 .offer-val .unit{font-size:22px;font-weight:700}
-.offer-lbl{font-size:13px;font-weight:600;color:rgba(255,255,255,.72);letter-spacing:.5px;text-transform:uppercase;margin-top:8px}
-.offer-note{font-size:14px;color:rgba(255,255,255,.65);margin-top:28px;text-align:center;line-height:1.7}
+.offer-lbl{font-size:13px;font-weight:600;color:rgba(255,255,255,.55);letter-spacing:.5px;text-transform:uppercase;margin-top:8px}
+.offer-note{font-size:14px;color:rgba(255,255,255,.45);margin-top:28px;text-align:center;line-height:1.7}
 
 /* ── SCOPE ── */
-.scope-section{background:var(--brand-faint)}
+.scope-section{background:var(--gray-faint)}
 .scope-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
 .scope-card{background:#fff;border:1px solid var(--gray-light);border-radius:14px;padding:28px 24px;box-shadow:0 2px 8px rgba(0,0,0,.04)}
-.scope-icon{width:44px;height:44px;border-radius:12px;background:var(--brand-pale);display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:16px}
-.scope-title{font-size:16px;font-weight:700;color:var(--brand-dark);margin-bottom:10px}
+.scope-icon{width:44px;height:44px;border-radius:12px;background:var(--blue-pale);display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:16px}
+.scope-title{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:10px}
 .scope-list{list-style:none;display:flex;flex-direction:column;gap:8px}
 .scope-list li{font-size:14px;color:var(--gray);line-height:1.5;display:flex;gap:8px}
-.scope-list li::before{content:'→';color:var(--brand-accent);font-weight:800;flex-shrink:0}
+.scope-list li::before{content:'→';color:var(--blue);font-weight:700;flex-shrink:0}
 
 /* ── LOCATIONS ── */
 .locations-section{background:#fff}
 .location-grid{display:flex;flex-wrap:wrap;gap:16px;margin-top:36px}
 .location-card{background:#fff;border:1.5px solid var(--gray-light);border-radius:12px;padding:20px 28px;display:flex;align-items:center;gap:16px;flex:1;min-width:180px;box-shadow:0 2px 8px rgba(0,0,0,.04);transition:border-color .2s,box-shadow .2s}
-.location-card:hover{border-color:var(--brand-accent);box-shadow:0 4px 16px rgba(var(--brand-rgb),.12)}
-.loc-pin{width:44px;height:44px;border-radius:50%;background:var(--brand-pale);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
-.loc-name{font-size:17px;font-weight:700;color:var(--brand-dark)}
-.loc-sub{font-size:13px;font-weight:600;color:var(--brand-accent);margin-top:2px}
-.location-note{margin-top:24px;padding:16px 20px;background:rgba(var(--brand-rgb),.05);border:1px solid rgba(var(--brand-rgb),.14);border-radius:10px;font-size:14px;color:var(--body);font-weight:500;display:flex;align-items:center;gap:8px}
+.location-card:hover{border-color:var(--blue);box-shadow:0 4px 16px rgba(26,111,232,.12)}
+.loc-pin{width:44px;height:44px;border-radius:50%;background:var(--blue-pale);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.loc-name{font-size:17px;font-weight:700;color:var(--navy)}
+.loc-sites{font-size:13px;font-weight:600;color:var(--blue);margin-top:2px}
+.location-note{margin-top:24px;padding:16px 20px;background:var(--blue-faint);border:1px solid #BFDBFE;border-radius:10px;font-size:14px;color:#1E3A5F;font-weight:500;display:flex;align-items:center;gap:8px}
 
 /* ── WEEK ── */
-.week-section{background:var(--brand-faint)}
+.week-section{background:var(--gray-faint)}
 .week-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:40px}
 .week-card{background:#fff;border:1px solid var(--gray-light);border-radius:14px;padding:28px;display:flex;gap:18px;align-items:flex-start;box-shadow:0 2px 8px rgba(0,0,0,.04)}
-.week-icon{width:48px;height:48px;border-radius:14px;background:var(--brand-pale);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
-.week-title{font-size:17px;font-weight:700;color:var(--brand-dark);margin-bottom:8px}
+.week-icon{width:48px;height:48px;border-radius:14px;background:var(--blue-pale);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+.week-title{font-size:17px;font-weight:700;color:var(--navy);margin-bottom:8px}
 .week-desc{font-size:14px;color:var(--gray);line-height:1.65}
 
 /* ── REQUIREMENTS ── */
@@ -165,47 +240,85 @@ a{text-decoration:none}
 .reqs-split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-top:40px}
 .req-list{display:flex;flex-direction:column;gap:14px}
 .req-item{display:flex;align-items:flex-start;gap:14px;padding:16px 20px;background:var(--gray-faint);border:1px solid var(--gray-light);border-radius:10px}
-.req-check{width:26px;height:26px;border-radius:50%;background:var(--brand-success);display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:700;flex-shrink:0;margin-top:1px}
+.req-check{width:26px;height:26px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:700;flex-shrink:0;margin-top:1px}
 .req-text{font-size:15px;color:var(--body);font-weight:500;line-height:1.5}
-.reqs-callout{background:var(--brand-900);border-radius:16px;padding:36px 32px;position:sticky;top:80px}
+.reqs-callout{background:var(--navy);border-radius:16px;padding:36px 32px;position:sticky;top:80px}
 .reqs-callout h3{font-size:22px;font-weight:800;color:#fff;margin-bottom:12px;letter-spacing:-.5px}
-.reqs-callout p{font-size:14px;color:rgba(255,255,255,.78);line-height:1.75;margin-bottom:24px}
+.reqs-callout p{font-size:14px;color:rgba(255,255,255,.65);line-height:1.75;margin-bottom:24px}
 .reqs-stat{display:flex;align-items:center;gap:14px;padding:14px 0;border-top:1px solid rgba(255,255,255,.1)}
 .reqs-stat-val{font-size:26px;font-weight:900;color:#fff;min-width:60px}
-.reqs-stat-label{font-size:13px;color:rgba(255,255,255,.72);font-weight:500}
+.reqs-stat-label{font-size:13px;color:rgba(255,255,255,.55);font-weight:500}
 
 /* ── FOOTER ── */
-footer{background:var(--brand-950);padding:40px 40px 28px;border-top:1px solid rgba(255,255,255,.06)}
+footer{background:#0A1F42;padding:40px 40px 28px;border-top:1px solid rgba(255,255,255,.06)}
 .footer-top{display:flex;justify-content:space-between;align-items:center;padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:20px;flex-wrap:wrap;gap:20px}
 .footer-contact{display:flex;gap:28px;align-items:center}
-.footer-contact a{color:rgba(255,255,255,.78);font-size:14px;text-decoration:none;transition:color .2s}
+.footer-contact a{color:rgba(255,255,255,.6);font-size:14px;text-decoration:none;transition:color .2s}
 .footer-contact a:hover{color:#fff}
 .footer-bottom{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px}
-.footer-copy{font-size:12px;color:rgba(255,255,255,.42);line-height:1.7}
+.footer-copy{font-size:12px;color:rgba(255,255,255,.3);line-height:1.7}
 .footer-links{display:flex;gap:20px}
-.footer-links a{color:rgba(255,255,255,.55);font-size:12px}
+.footer-links a{color:rgba(255,255,255,.35);font-size:12px}
 .footer-links a:hover{color:rgba(255,255,255,.6)}
 
+/* ── SECTION CTAs ── */
+.section-cta{text-align:center;margin-top:36px}
+
 /* ── MOBILE ── */
-@media(max-width:900px){.hero-layout{grid-template-columns:1fr;gap:32px}.msf-card{max-width:100%}.hero h1{font-size:32px}}
+@media(max-width:900px){
+  .hero-layout{grid-template-columns:1fr;gap:32px}
+  .msf-card{max-width:100%}
+  .hero h1{font-size:32px}
+}
 @media(max-width:768px){
-  .nav{padding:0 20px}.hero{padding:40px 20px 48px}.hero h1{letter-spacing:-0.5px}
-  .hero-stats{flex-direction:row;width:100%}.hero-stat{flex:1;padding:10px 6px;border-right:1px solid rgba(255,255,255,.1);border-bottom:none;text-align:center}.hero-stat:last-child{border-right:none}
-  .hero-stat-val{font-size:19px}.hero-stat-val .unit{font-size:13px}.hero-stat-label{font-size:9px;letter-spacing:.3px}
-  .trust-bar{padding:14px 20px;gap:20px}.section{padding:52px 20px}.section-h2{font-size:28px}
-  .offer-section{padding:52px 20px}.offer-h2{font-size:28px}.offer-cards{grid-template-columns:1fr}
-  .scope-grid{grid-template-columns:1fr}.week-grid{grid-template-columns:1fr}.reqs-split{grid-template-columns:1fr}
-  .reqs-callout{position:static}.intro-box{padding:28px 24px}.footer-top{flex-direction:column;align-items:flex-start}.footer-bottom{flex-direction:column}
+  .nav{padding:0 20px}
+  .hero{padding:40px 20px 48px}
+  .hero h1{letter-spacing:-0.5px}
+  .hero-stats{flex-direction:row;width:100%}
+  .hero-stat{flex:1;padding:10px 6px;border-right:1px solid rgba(255,255,255,.1);border-bottom:none;text-align:center}
+  .hero-stat:last-child{border-right:none}
+  .hero-stat-val{font-size:19px}
+  .hero-stat-val .unit{font-size:13px}
+  .hero-stat-label{font-size:9px;letter-spacing:.3px}
+  .trust-bar{padding:14px 20px;gap:20px}
+  .section{padding:52px 20px}
+  .section-h2{font-size:28px}
+  .offer-section{padding:52px 20px}
+  .offer-h2{font-size:28px}
+  .offer-cards{grid-template-columns:1fr}
+  .scope-grid{grid-template-columns:1fr}
+  .week-grid{grid-template-columns:1fr}
+  .reqs-split{grid-template-columns:1fr}
+  .reqs-callout{position:static}
+  .intro-box{padding:28px 24px}
+  .footer-top{flex-direction:column;align-items:flex-start}
+  .footer-bottom{flex-direction:column}
 }
 </style>
-
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1205619584799323');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1205619584799323&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
 
 <!-- NAV -->
 <nav class="nav">
   <div>
-    <img src="https://www.fiaconcleaningservices.com.au/wp-content/uploads/2021/09/logo.svg" alt="Fiacon Cleaning Services" style="height:38px;filter:brightness(0) invert(1)">
+    <img src="/logo.svg" alt="Fiacon Cleaning Services" style="height:38px;filter:brightness(0) invert(1)">
   </div>
   <a href="#hero-form" class="nav-cta">Apply Now →</a>
 </nav>
@@ -213,35 +326,42 @@ footer{background:var(--brand-950);padding:40px 40px 28px;border-top:1px solid r
 <!-- HERO -->
 <section class="hero" id="hero-form">
   <div class="hero-layout">
+
+    <!-- LEFT: PITCH -->
     <div class="hero-left">
-      <div class="hero-badge"><span class="dot"></span>We Are Hiring</div>
-      <h1>We're Hiring:<br><span class="highlight">Part Time Cleaner</span></h1>
+      <div class="hero-badge">
+        <span class="dot"></span>
+        We Are Hiring
+      </div>
+      <h1>We're Hiring:<br>Part Time Cleaners</h1>
       <div class="hero-location">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        Narellan · Sydney South-West
+        Narellan · South-West Sydney
       </div>
       <div class="hero-stats">
         <div class="hero-stat">
-          <div class="hero-stat-val">$33.61</div>
+          <div class="hero-stat-val">$35.20</div>
           <div class="hero-stat-label">Per Hour</div>
         </div>
         <div class="hero-stat">
-          <div class="hero-stat-val">30</div>
+          <div class="hero-stat-val">25</div>
           <div class="hero-stat-label">Hrs/Week</div>
         </div>
         <div class="hero-stat">
-          <div class="hero-stat-val">6</div>
+          <div class="hero-stat-val">4</div>
           <div class="hero-stat-label">Positions</div>
         </div>
       </div>
       <div class="hero-trust">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        30+ years in business · Family-owned · Australian
+        <span>30+ years in business</span> · Australian-owned
       </div>
     </div>
 
-    <!-- MULTI-STEP FORM -->
+    <!-- RIGHT: MULTI-STEP FORM -->
     <div class="msf-card">
+
+      <!-- Progress bar -->
       <div class="msf-progress" id="msf-progress">
         <div class="msf-step-dot active" id="dot1">1</div>
         <div class="msf-step-line pending" id="line1"></div>
@@ -251,12 +371,12 @@ footer{background:var(--brand-950);padding:40px 40px 28px;border-top:1px solid r
       </div>
       <div class="msf-step-label" id="msf-step-label">Step 1 of 3 — Your Details</div>
 
-      <!-- STEP 1: Contact details -->
+      <!-- STEP 1: Contact -->
       <div class="msf-step active" id="msf1">
         <div class="msf-step-title">Let's start with your details</div>
         <div class="msf-step-sub">Takes 60 seconds. No CV required.</div>
         <form onsubmit="msfNext(event, 1)">
-          <input type="text" name="msf_name" class="msf-input" placeholder="Your Name" required>
+          <input type="text" name="msf_name" class="msf-input" placeholder="Contact Name" required>
           <input type="tel" name="msf_phone" id="msf_phone" class="msf-input" placeholder="Mobile Number" inputmode="tel" required autocomplete="tel">
           <div id="phone-error" style="display:none;color:#DC2626;font-size:12px;font-weight:600;margin-top:-8px;margin-bottom:8px;">⚠️ Please enter a valid Australian phone number.</div>
           <input type="email" name="msf_email" class="msf-input" placeholder="Email Address" required>
@@ -265,59 +385,59 @@ footer{background:var(--brand-950);padding:40px 40px 28px;border-top:1px solid r
         <div class="msf-trust">🔒 Your details are safe and secure.</div>
       </div>
 
-      <!-- STEP 2: Screening questions 1–3 (dynamic) -->
+      <!-- STEP 2: Qualifying Q's 1–3 -->
       <div class="msf-step" id="msf2">
         <div class="msf-step-title">Quick qualifying questions</div>
         <div class="msf-step-sub">3 questions — just click your answer.</div>
         <form onsubmit="msfNext(event, 2)">
           <div class="msf-q">
             <div class="msf-q-label">Do you have a Working With Children Check (WWCC)?</div>
-            <div class="msf-opts" data-field="sq_1">
-              <label class="msf-opt"><input type="radio" name="sq_1" value="Yes"> Yes</label>
-              <label class="msf-opt"><input type="radio" name="sq_1" value="No — but I can get one"> No — but I can get one</label>
+            <div class="msf-opts" data-field="m2q1">
+              <label class="msf-opt"><input type="radio" name="m2q1" value="Yes"> Yes</label>
+              <label class="msf-opt"><input type="radio" name="m2q1" value="No — but I can get one"> No — but I can get one</label>
             </div>
           </div>
           <div class="msf-q">
             <div class="msf-q-label">Do you have a current Police Check?</div>
-            <div class="msf-opts" data-field="sq_2">
-              <label class="msf-opt"><input type="radio" name="sq_2" value="Yes"> Yes</label>
-              <label class="msf-opt"><input type="radio" name="sq_2" value="No — but I can get one"> No — but I can get one</label>
+            <div class="msf-opts" data-field="m2q2">
+              <label class="msf-opt"><input type="radio" name="m2q2" value="Yes"> Yes</label>
+              <label class="msf-opt"><input type="radio" name="m2q2" value="No — but I can get one"> No — but I can get one</label>
             </div>
           </div>
           <div class="msf-q">
-            <div class="msf-q-label">Do you have proven commercial cleaning experience?</div>
-            <div class="msf-opts" data-field="sq_3">
-              <label class="msf-opt"><input type="radio" name="sq_3" value="Yes"> Yes</label>
-              <label class="msf-opt"><input type="radio" name="sq_3" value="No"> No</label>
+            <div class="msf-q-label">Are you available Mon–Fri for a 5-hour shift starting between 3:30pm–6:30pm?</div>
+            <div class="msf-opts" data-field="m2q3">
+              <label class="msf-opt"><input type="radio" name="m2q3" value="Yes"> Yes</label>
+              <label class="msf-opt"><input type="radio" name="m2q3" value="No"> No</label>
             </div>
           </div>
           <button type="submit" class="msf-btn">Next → Final Step</button>
         </form>
       </div>
 
-      <!-- STEP 3: Screening questions 4–5 + open text (dynamic) -->
+      <!-- STEP 3: Qualifying Q's 4–5 + Experience -->
       <div class="msf-step" id="msf3">
         <div class="msf-step-title">Almost there</div>
-        <div class="msf-step-sub">2 more questions and a quick note.</div>
+        <div class="msf-step-sub">Two more questions and a quick note.</div>
         <form onsubmit="msfSubmit(event)">
           <div class="msf-q">
             <div class="msf-q-label">Do you have the right to work in Australia?</div>
-            <div class="msf-opts" data-field="sq_4">
-              <label class="msf-opt"><input type="radio" name="sq_4" value="Yes — citizen/PR"> Yes — citizen/PR</label>
-              <label class="msf-opt"><input type="radio" name="sq_4" value="Yes — valid visa"> Yes — valid visa</label>
-              <label class="msf-opt"><input type="radio" name="sq_4" value="No"> No</label>
+            <div class="msf-opts" data-field="m3q4">
+              <label class="msf-opt"><input type="radio" name="m3q4" value="Yes — citizen/PR"> Yes — citizen/PR</label>
+              <label class="msf-opt"><input type="radio" name="m3q4" value="Yes — valid visa"> Yes — valid visa</label>
+              <label class="msf-opt"><input type="radio" name="m3q4" value="No"> No</label>
             </div>
           </div>
           <div class="msf-q">
-            <div class="msf-q-label">Are you available Monday to Friday, 3:30pm–8:30pm?</div>
-            <div class="msf-opts" data-field="sq_5">
-              <label class="msf-opt"><input type="radio" name="sq_5" value="Yes"> Yes</label>
-              <label class="msf-opt"><input type="radio" name="sq_5" value="No"> No</label>
+            <div class="msf-q-label">Do you have commercial cleaning experience?</div>
+            <div class="msf-opts" data-field="m3q5">
+              <label class="msf-opt"><input type="radio" name="m3q5" value="Yes"> Yes</label>
+              <label class="msf-opt"><input type="radio" name="m3q5" value="No"> No</label>
             </div>
           </div>
           <div class="msf-q">
             <div class="msf-q-label">Briefly describe your commercial cleaning experience</div>
-            <textarea name="m3_experience" class="msf-textarea" placeholder="e.g. 3 years cleaning offices and schools in Sydney..." required></textarea>
+            <textarea name="m3q6" class="msf-textarea" placeholder="e.g. 3 years cleaning schools and offices in Sydney..." required></textarea>
           </div>
           <button type="submit" class="msf-btn">Submit Application →</button>
         </form>
@@ -329,6 +449,7 @@ footer{background:var(--brand-950);padding:40px 40px 28px;border-top:1px solid r
         <div class="msf-success-title">Application Submitted!</div>
         <div class="msf-success-sub">Jake will be in touch shortly on <strong id="msf-success-phone"></strong>.<br>Keep an eye on your inbox too.</div>
       </div>
+
     </div>
   </div>
 </section>
@@ -336,22 +457,22 @@ footer{background:var(--brand-950);padding:40px 40px 28px;border-top:1px solid r
 <!-- TRUST BAR -->
 <div class="trust-bar">
   <div class="trust-item"><div class="trust-icon">🏫</div>Private School — Set Location</div>
-  <div class="trust-item"><div class="trust-icon">⏰</div>Fixed Hours: 3:30pm–8:30pm</div>
-  <div class="trust-item"><div class="trust-icon">🇦🇺</div>Family-Owned, 30+ Years</div>
+  <div class="trust-item"><div class="trust-icon">⏰</div>Flexible Start: 3:30pm–6:30pm</div>
+  <div class="trust-item"><div class="trust-icon">🇦🇺</div>Australian-Owned, 30+ Years</div>
   <div class="trust-item"><div class="trust-icon">🧹</div>All Equipment Provided</div>
-  
 </div>
 
 <!-- INTRO -->
 <section class="section intro-section">
   <div class="section-inner">
     <div class="section-label">About This Opportunity</div>
-    <h2 class="section-h2">Stable Part-Time Work
-at a Private School in Narellan</h2>
+    <h2 class="section-h2">Stable Part-Time Work<br>at a Private School in Narellan</h2>
     <div class="intro-box">
-      <p>Fiacon Facility Services is a proudly family-owned company with over 30 years of experience in commercial cleaning across Australia. We're hiring 6 reliable part-time cleaners to service a private school in the Narellan region. Fixed hours, set location, all equipment supplied — just show up and do great work.</p>
+      <p>Fiacon Facility Services Pty Ltd is a proudly family-owned company with over 30 years of experience in commercial cleaning across Australia. We're hiring <strong>4 reliable part-time cleaners</strong> to service a private school in the Narellan region. Five-hour shifts every weekday during school terms, with a flexible start time — all equipment supplied. Just show up and do great work.</p>
     </div>
-    <div class="section-cta"><a href="#hero-form" class="btn-primary">Apply Now →</a></div>
+    <div class="section-cta">
+      <a href="#hero-form" class="btn-primary">Apply Now →</a>
+    </div>
   </div>
 </section>
 
@@ -359,27 +480,27 @@ at a Private School in Narellan</h2>
 <section class="offer-section">
   <div class="section-inner">
     <div class="offer-label">What You'll Earn</div>
-    <h2 class="offer-h2">Consistent Pay, Fixed Hours</h2>
-    <p class="offer-sub">Set shift times every weekday during school terms — you'll always know exactly when and how much you're earning.</p>
+    <h2 class="offer-h2">Steady, Predictable Income</h2>
+    <p class="offer-sub">Five-hour shifts every weekday during school terms, with a start time that flexes around you — you always know exactly how much you're earning.</p>
     <div class="offer-cards">
       <div class="offer-card">
-        <div class="offer-val">$33.61</div>
+        <div class="offer-val">$35.20</div>
         <div class="offer-lbl">Per Hour (Gross)</div>
       </div>
       <div class="offer-card">
-        <div class="offer-val">30</div>
+        <div class="offer-val">25</div>
         <div class="offer-lbl">Hours / Week</div>
       </div>
       <div class="offer-card">
-        <div class="offer-val">6</div>
+        <div class="offer-val">4</div>
         <div class="offer-lbl">Positions Available</div>
       </div>
     </div>
-    <p class="offer-note">Superannuation at 12%, 4 weeks Annual Leave, and 10 days Sick Leave included.</p>
+    <p class="offer-note">Super at 12% · 4 weeks Annual Leave · 10 days Sick Leave included.<br>School terms only — approx. 39 weeks per year.</p>
   </div>
 </section>
 
-<!-- SCOPE OF WORK -->
+<!-- SCOPE -->
 <section class="section scope-section">
   <div class="section-inner">
     <div class="section-label">What You'll Be Doing</div>
@@ -391,9 +512,9 @@ at a Private School in Narellan</h2>
         <div class="scope-title">General Cleaning</div>
         <ul class="scope-list">
           <li>Vacuuming and mopping all floors</li>
-          <li>Dusting surfaces and fixtures</li>
-          <li>Cleaning classrooms, halls & kitchens</li>
+          <li>Cleaning classrooms, halls &amp; kitchens</li>
           <li>Bathrooms and amenities</li>
+          <li>Dusting surfaces and fixtures</li>
         </ul>
       </div>
       <div class="scope-card">
@@ -401,9 +522,9 @@ at a Private School in Narellan</h2>
         <div class="scope-title">Working Hours</div>
         <ul class="scope-list">
           <li>Monday to Friday only</li>
-          <li>3:30pm – 8:30pm each day</li>
+          <li>Flexible start: 3:30pm – 6:30pm</li>
           <li>5 hours per shift</li>
-          <li>School terms only (~39 weeks/year)</li>
+          <li>School terms only (~39 weeks/yr)</li>
         </ul>
       </div>
       <div class="scope-card">
@@ -417,7 +538,9 @@ at a Private School in Narellan</h2>
         </ul>
       </div>
     </div>
-    <div class="section-cta"><a href="#hero-form" class="btn-primary">Apply Now →</a></div>
+    <div class="section-cta">
+      <a href="#hero-form" class="btn-primary">Apply Now →</a>
+    </div>
   </div>
 </section>
 
@@ -425,59 +548,34 @@ at a Private School in Narellan</h2>
 <section class="section locations-section">
   <div class="section-inner">
     <div class="section-label">Where You'll Work</div>
-    <h2 class="section-h2">1 Location Across the Region</h2>
-    <p class="section-sub">All sites serviced on a routine weekly basis with consistent, predictable scheduling.</p>
+    <h2 class="section-h2">One Private School in Narellan</h2>
+    <p class="section-sub">A single school site in the Narellan region — same location every shift, Monday to Friday.</p>
     <div class="location-grid">
-      <div class="location-card">
-        <div class="loc-pin">📍</div>
-        <div>
-          <div class="loc-name">Narellan</div>
-          <div class="loc-sub">Private school site</div>
-        </div>
-      </div>
+      <div class="location-card"><div class="loc-pin">📍</div><div><div class="loc-name">Narellan</div><div class="loc-sites">Private school site</div></div></div>
+      <div class="location-card"><div class="loc-pin">🏫</div><div><div class="loc-name">South-West Sydney</div><div class="loc-sites">Single location</div></div></div>
     </div>
-    <div class="location-note">ℹ️ One private school site in the Narellan region. Cleaning runs Monday to Friday during school terms.</div>
-    <div class="section-cta"><a href="#hero-form" class="btn-primary">Apply Now →</a></div>
+    <div class="location-note">ℹ️ One school site cleaned Monday to Friday during school terms (~39 weeks per year).</div>
+    <div class="section-cta">
+      <a href="#hero-form" class="btn-primary">Apply Now →</a>
+    </div>
   </div>
 </section>
 
-<!-- WHAT YOUR WEEK LOOKS LIKE -->
+<!-- WEEK -->
 <section class="section week-section">
   <div class="section-inner">
     <div class="section-label">Day-to-Day</div>
     <h2 class="section-h2">What Your Week Looks Like</h2>
-    <p class="section-sub">Structured. Consistent. No surprises.</p>
+    <p class="section-sub">Predictable. Consistent. Built around your operation.</p>
     <div class="week-grid">
-      <div class="week-card">
-        <div class="week-icon">🗓️</div>
-        <div>
-          <div class="week-title">Set Routine</div>
-          <div class="week-desc">Mon–Fri, 3:30pm–8:30pm at a single school site. Same location, same hours, every week.</div>
-        </div>
-      </div>
-      <div class="week-card">
-        <div class="week-icon">👥</div>
-        <div>
-          <div class="week-title">Team Environment</div>
-          <div class="week-desc">You'll work alongside 5 other cleaners as part of a coordinated team — not alone on multiple sites.</div>
-        </div>
-      </div>
-      <div class="week-card">
-        <div class="week-icon">⏱️</div>
-        <div>
-          <div class="week-title">Predictable Hours</div>
-          <div class="week-desc">30 hours per week during school terms. You know exactly what you're signing up for.</div>
-        </div>
-      </div>
-      <div class="week-card">
-        <div class="week-icon">🧹</div>
-        <div>
-          <div class="week-title">Everything Supplied</div>
-          <div class="week-desc">Fiacon provides all equipment, chemicals and consumables. No upfront costs, no logistics headaches.</div>
-        </div>
-      </div>
+      <div class="week-card"><div class="week-icon">🗓️</div><div><div class="week-title">Set Routine</div><div class="week-desc">Mon–Fri at one school site, starting any time between 3:30pm–6:30pm. Same location, same 5-hour shift, every week — no surprises.</div></div></div>
+      <div class="week-card"><div class="week-icon">👥</div><div><div class="week-title">Team Environment</div><div class="week-desc">You'll work alongside 3 other cleaners as part of a coordinated team — not alone across multiple sites.</div></div></div>
+      <div class="week-card"><div class="week-icon">⏱️</div><div><div class="week-title">25 Hours Per Week</div><div class="week-desc">Five hours per shift, five days a week. You know exactly what you're signing up for every single week.</div></div></div>
+      <div class="week-card"><div class="week-icon">🧹</div><div><div class="week-title">Everything Supplied</div><div class="week-desc">Fiacon provides all equipment, chemicals and consumables. No upfront costs, no logistics headaches.</div></div></div>
     </div>
-    <div class="section-cta"><a href="#hero-form" class="btn-primary">Apply Now →</a></div>
+    <div class="section-cta">
+      <a href="#hero-form" class="btn-primary">Apply Now →</a>
+    </div>
   </div>
 </section>
 
@@ -488,54 +586,21 @@ at a Private School in Narellan</h2>
     <h2 class="section-h2">What We're Looking For</h2>
     <div class="reqs-split">
       <div class="req-list">
-        <div class="req-item">
-          <div class="req-check">✓</div>
-          <div class="req-text">Working With Children Check (WWCC)</div>
-        </div>
-        <div class="req-item">
-          <div class="req-check">✓</div>
-          <div class="req-text">Current Police Check</div>
-        </div>
-        <div class="req-item">
-          <div class="req-check">✓</div>
-          <div class="req-text">Right to Work in Australia</div>
-        </div>
-        <div class="req-item">
-          <div class="req-check">✓</div>
-          <div class="req-text">Must pass a pre-employment medical (including drug test)</div>
-        </div>
-        <div class="req-item">
-          <div class="req-check">✓</div>
-          <div class="req-text">Proven commercial cleaning experience</div>
-        </div>
-        <div class="req-item">
-          <div class="req-check">✓</div>
-          <div class="req-text">Ability to work well within a cleaning team</div>
-        </div>
-        <div class="req-item">
-          <div class="req-check">✓</div>
-          <div class="req-text">Ability to read and write English</div>
-        </div>
-        <div class="req-item">
-          <div class="req-check">✓</div>
-          <div class="req-text">Strong communication — phone, text, email & WhatsApp</div>
-        </div>
+        <div class="req-item"><div class="req-check">✓</div><div class="req-text">Working With Children Check (WWCC)</div></div>
+        <div class="req-item"><div class="req-check">✓</div><div class="req-text">Current Police Check</div></div>
+        <div class="req-item"><div class="req-check">✓</div><div class="req-text">Right to Work in Australia</div></div>
+        <div class="req-item"><div class="req-check">✓</div><div class="req-text">Must pass pre-employment medical (including drug test)</div></div>
+        <div class="req-item"><div class="req-check">✓</div><div class="req-text">Proven commercial cleaning experience</div></div>
+        <div class="req-item"><div class="req-check">✓</div><div class="req-text">Ability to work well within a cleaning team</div></div>
+        <div class="req-item"><div class="req-check">✓</div><div class="req-text">Ability to read and write English</div></div>
+        <div class="req-item"><div class="req-check">✓</div><div class="req-text">Strong communication — phone, text, email &amp; WhatsApp</div></div>
       </div>
       <div class="reqs-callout">
         <h3>Tick all the boxes?</h3>
-        <p>We're hiring 6 cleaners to form a reliable team at one established private school site. Stable, ongoing work with a company that's been around for 30+ years.</p>
-        <div class="reqs-stat">
-          <div class="reqs-stat-val">6</div>
-          <div class="reqs-stat-label">Positions available now</div>
-        </div>
-        <div class="reqs-stat">
-          <div class="reqs-stat-val">$840</div>
-          <div class="reqs-stat-label">Gross weekly pay</div>
-        </div>
-        <div class="reqs-stat">
-          <div class="reqs-stat-val">30+</div>
-          <div class="reqs-stat-label">Years in business</div>
-        </div>
+        <p>We're hiring 4 cleaners for one established private school site — stable, ongoing work with a 30+ year company.</p>
+        <div class="reqs-stat"><div class="reqs-stat-val">4</div><div class="reqs-stat-label">Positions available now</div></div>
+        <div class="reqs-stat"><div class="reqs-stat-val">$880</div><div class="reqs-stat-label">Gross weekly pay (25hrs)</div></div>
+        <div class="reqs-stat"><div class="reqs-stat-val">30+</div><div class="reqs-stat-label">Years in business — we're not going anywhere</div></div>
         <div style="margin-top:28px">
           <a href="#hero-form" class="btn-primary" style="display:block;text-align:center;padding:16px">Apply Now →</a>
         </div>
@@ -547,15 +612,15 @@ at a Private School in Narellan</h2>
 <!-- FOOTER -->
 <footer>
   <div class="footer-top">
-    <div><img src="https://www.fiaconcleaningservices.com.au/wp-content/uploads/2021/09/logo.svg" alt="Fiacon Cleaning Services" style="height:32px;filter:brightness(0) invert(1);opacity:.85"></div>
+    <div><img src="/logo.svg" alt="Fiacon" style="height:32px;filter:brightness(0) invert(1);opacity:.85"></div>
     <div class="footer-contact">
       <a href="mailto:Jake.g@fiacon.com.au">📧 Jake.g@fiacon.com.au</a>
-      <a href="tel:0432400758">📞 0432400758</a>
+      <a href="tel:0432400758">📞 0432 400 758</a>
     </div>
   </div>
   <div class="footer-bottom">
     <div class="footer-copy">
-      Copyright © 2026 Fiacon Facility Services Pty Ltd – All Rights Reserved.<br>
+      Copyright © 2026 FIACON – All Rights Reserved.<br>
       This site is not a part of the Facebook™ website or Facebook™ Inc. FACEBOOK™ is a trademark of FACEBOOK™, Inc.
     </div>
     <div class="footer-links">
@@ -566,23 +631,19 @@ at a Private School in Narellan</h2>
 </footer>
 
 <script>
-// ── CONFIG (injected at build time) ───────────────────────────────────────────
-const SITE_CONFIG = {"step2Questions": [{"fieldName": "sq_1"}, {"fieldName": "sq_2"}, {"fieldName": "sq_3"}], "step3Questions": [{"fieldName": "sq_4"}, {"fieldName": "sq_5"}]};
-
+const SHEET_URL = 'https://script.google.com/macros/s/AKfycbx7MfWQkjXYwUfc4DT83GT2NvhcIOky4fCWZ87zG0owjGTR5o7GRMHwIObR8xega2-Z/exec'
 let msfData = {}
 
-// Phone validation
+// Phone validation — Australian numbers (mobile + landline + intl format)
 function validatePhone(val) {
   const stripped = val.replace(/[\s\-\(\)\.]/g, '')
-  const normalised = stripped.replace(/^\+61/, '0')
-  // AU numbers
-  if (/^0[2-9]\d{8}$/.test(normalised)) return true
-  // US numbers (10 digits, area code not starting with 0 or 1)
-  if (/^[2-9]\d{9}$/.test(stripped.replace(/^\+1/, ''))) return true
-  return false
+  // +61 format
+  const intl = stripped.replace(/^\+61/, '0')
+  // Must be 10 digits starting with 0, or 04xx for mobile
+  return /^0[2-9]\d{8}$/.test(intl)
 }
 
-// Phone auto-format
+// Auto-format as they type: 0412 345 678
 const phoneInput = document.getElementById('msf_phone')
 if (phoneInput) {
   phoneInput.addEventListener('input', function() {
@@ -590,14 +651,17 @@ if (phoneInput) {
     if (v.length > 4 && v.length <= 7) v = v.slice(0,4) + ' ' + v.slice(4)
     else if (v.length > 7) v = v.slice(0,4) + ' ' + v.slice(4,7) + ' ' + v.slice(7)
     this.value = v
+    // Hide error while typing
     document.getElementById('phone-error').style.display = 'none'
     this.style.borderColor = ''
   })
 }
 
+// Progress updater
 function updateProgress(step) {
   const labels = ['Step 1 of 3 — Your Details', 'Step 2 of 3 — Qualifying Questions', 'Step 3 of 3 — Final Details']
   document.getElementById('msf-step-label').textContent = labels[step - 1] || ''
+
   for (let i = 1; i <= 3; i++) {
     const dot = document.getElementById('dot' + i)
     if (i < step) { dot.className = 'msf-step-dot done'; dot.textContent = '✓' }
@@ -616,16 +680,6 @@ function showStep(n) {
   if (el) el.classList.add('active')
 }
 
-function collectRadios(form, fieldNames) {
-  for (const name of fieldNames) {
-    if (!form.querySelector(`input[name="${name}"]:checked`)) {
-      alert('Please answer all questions before continuing.')
-      return false
-    }
-  }
-  return true
-}
-
 function msfNext(e, step) {
   e.preventDefault()
   const form = e.target
@@ -641,14 +695,18 @@ function msfNext(e, step) {
     msfData.business_name = form.msf_name.value
     msfData.phone = phoneVal
     msfData.email = form.msf_email.value
+    // Capture lead immediately
+
     updateProgress(2)
     showStep(2)
   } else if (step === 2) {
-    const step2Fields = SITE_CONFIG.step2Questions.map(q => q.fieldName)
-    if (!collectRadios(form, step2Fields)) return
-    step2Fields.forEach(name => {
-      msfData[name] = form.querySelector(`input[name="${name}"]:checked`)?.value || ''
-    })
+    const radios = ['m2q1','m2q2','m2q3']
+    for (const name of radios) {
+      if (!form.querySelector(`input[name="${name}"]:checked`)) { alert('Please answer all questions.'); return }
+    }
+    msfData.q1 = form.querySelector('input[name="m2q1"]:checked')?.value || ''
+    msfData.q2 = form.querySelector('input[name="m2q2"]:checked')?.value || ''
+    msfData.q3 = form.querySelector('input[name="m2q3"]:checked')?.value || ''
     updateProgress(3)
     showStep(3)
   }
@@ -658,27 +716,35 @@ function msfNext(e, step) {
 function msfSubmit(e) {
   e.preventDefault()
   const form = e.target
-  const step3Fields = SITE_CONFIG.step3Questions.map(q => q.fieldName)
-  if (!collectRadios(form, step3Fields)) return
-  step3Fields.forEach(name => {
-    msfData[name] = form.querySelector(`input[name="${name}"]:checked`)?.value || ''
-  })
-  msfData.experience = form.m3_experience.value
+  const radios = ['m3q4','m3q5']
+  for (const name of radios) {
+    if (!form.querySelector(`input[name="${name}"]:checked`)) { alert('Please answer all questions.'); return }
+  }
+  msfData.q4 = form.querySelector('input[name="m3q4"]:checked')?.value || ''
+  msfData.q5 = form.querySelector('input[name="m3q5"]:checked')?.value || ''
+  msfData.q6 = form.m3q6.value
   msfData.step = 'full-application'
 
-  document.getElementById('msf-success-phone').textContent = msfData.phone
+  // 1. Google Sheets (existing)
+  fetch('/api/sheets', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(msfData) }).catch(()=>{})
 
-  // 1. Sheets proxy
-  msfData.role_path = 'narellan'
-  fetch('/narellan/api/sheets', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(msfData) }).catch(()=>{})
-  // 2. GHL contact + notification
-  fetch('/narellan/api/ghl', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(msfData) }).catch(()=>{})
+  // 2. GHL — create contact + trigger SMS workflow
+  fetch('/api/ghl', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      name: msfData.business_name,
+      phone: msfData.phone,
+      email: msfData.email,
+      q1: msfData.q1, q2: msfData.q2, q3: msfData.q3,
+      q4: msfData.q4, q5: msfData.q5, q6: msfData.q6,
+    })
+  }).catch(()=>{})
 
-  // Redirect to thank you page
-  window.location.href = window.location.pathname.replace(/\/+$/, '') + '/thank-you'
+  window.location.href = '/narellan/thank-you'
 }
 
-// Radio interactivity
+// Radio interactivity for all msf-opts
 document.querySelectorAll('.msf-opts').forEach(group => {
   group.querySelectorAll('.msf-opt').forEach(opt => {
     opt.addEventListener('click', () => {
@@ -695,10 +761,10 @@ document.querySelectorAll('.msf-opts').forEach(group => {
   window.FEEDBACK_CONFIG = {
     supabaseUrl: 'https://okwxnyqhoflvznxdrwfm.supabase.co',
     supabaseKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9rd3hueXFob2ZsdnpueGRyd2ZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUyNzgzODIsImV4cCI6MjA5MDg1NDM4Mn0.1mNrVIOl2Kt0fFdhpI6r9vUc6abdpu_g-YPar99UFkE',
-    pageId: 'narellan',
+    pageId: 'fiacon-narellan',
     clientTokens: ['fiacon']
   }
 </script>
-<script src="/feedback.js"></script>
+<script src="feedback.js"></script>
 </body>
 </html>
