@@ -3,10 +3,18 @@
 
 const SHEET_URL = 'https://script.google.com/macros/s/AKfycbwhCY7s0yVWKfT6qF6KBah3Q0NFEXb-PPzUsLdz1uQGtmHfDc_OgQM5fHEyQUgRjV4i/exec'
 
+// Roles with their own spreadsheet. Empty string = not wired yet (skip, never fall back to Narellan's sheet).
+const ROLE_SHEETS = {
+  'northern-beaches': '',
+}
+
 export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).end()
   try {
-    const response = await fetch(SHEET_URL, {
+    const role = (req.body || {}).role_path
+    const url = role in ROLE_SHEETS ? ROLE_SHEETS[role] : SHEET_URL
+    if (!url) return res.status(200).json({ ok: true, skipped: 'sheet not wired for ' + role })
+    const response = await fetch(url, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(req.body),

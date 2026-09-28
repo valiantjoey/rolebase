@@ -11,6 +11,14 @@
     {
       "source": "/narellan",
       "destination": "/narellan/index.html"
+    },
+    {
+      "source": "/northern-beaches/thank-you",
+      "destination": "/northern-beaches/thankyou.html"
+    },
+    {
+      "source": "/northern-beaches",
+      "destination": "/northern-beaches/index.html"
     }
   ]
 }
