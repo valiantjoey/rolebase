@@ -5,7 +5,7 @@ const SHEET_URL = 'https://script.google.com/macros/s/AKfycbwhCY7s0yVWKfT6qF6KBa
 
 // Roles with their own spreadsheet. Empty string = not wired yet (skip, never fall back to Narellan's sheet).
 const ROLE_SHEETS = {
-  'northern-beaches': '',
+  'northern-beaches': 'https://script.google.com/macros/s/AKfycbwCicbi2W6Q6atZ-w5QXR26gNA7W9HrXUzyXgx7BUD2YMf_cx1I-0HyfMnaBftl7-Qm6A/exec',
 }
 
 export default async function handler(req, res) {
