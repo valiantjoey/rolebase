@@ -19,6 +19,14 @@
     {
       "source": "/northern-beaches",
       "destination": "/northern-beaches/index.html"
+    },
+    {
+      "source": "/lawn-garden/thank-you",
+      "destination": "/lawn-garden/thankyou.html"
+    },
+    {
+      "source": "/lawn-garden",
+      "destination": "/lawn-garden/index.html"
     }
   ]
 }

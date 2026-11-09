@@ -6,6 +6,8 @@ const SHEET_URL = 'https://script.google.com/macros/s/AKfycbwhCY7s0yVWKfT6qF6KBa
 // Roles with their own spreadsheet. Empty string = not wired yet (skip, never fall back to Narellan's sheet).
 const ROLE_SHEETS = {
   'northern-beaches': 'https://script.google.com/macros/s/AKfycbwCicbi2W6Q6atZ-w5QXR26gNA7W9HrXUzyXgx7BUD2YMf_cx1I-0HyfMnaBftl7-Qm6A/exec',
+  // Lawn & Garden Technician (moved from fiacon-sydney.vercel.app); Rocco's original applicant sheet
+  'lawn-garden': 'https://script.google.com/macros/s/AKfycbxqsSOFRIeuAU-MnsS1m9lBSUc-60a02efm9MUy0kQWpEC_2BUeQehIXF1FW9N20fEGWw/exec',
 }
 
 export default async function handler(req, res) {

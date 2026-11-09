@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>We're Hiring: Lawn & Garden Technician — Fiacon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0F2D5E;
+    --blue: #1A6FE8;
+    --blue-light: #60A5FA;
+    --green: #16A34A;
+    --green-bg: #DCFCE7;
+    --text: #1A1A2A;
+    --muted: #6B7280;
+    --border: #E5E7EB;
+    --bg: #F8FAFC;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--bg); }
+
+  /* ── NAV ── */
+  .nav { background: var(--navy); height: 64px; display: flex; align-items: center; justify-content: space-between; padding: 0 40px; position: sticky; top: 0; z-index: 200; box-shadow: 0 2px 16px rgba(0,0,0,.25); }
+  .nav-cta { background: var(--blue); color: #fff; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 700; padding: 10px 22px; border-radius: 6px; border: none; cursor: pointer; transition: background .2s; letter-spacing: .3px; text-decoration: none; }
+  .nav-cta:hover { background: #1558c0; }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(135deg, #0F2D5E 0%, #1a3a6e 50%, #0d2550 100%);
+    padding: 64px 24px 80px;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: ''; position: absolute; inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  .hero-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 420px; gap: 60px; align-items: center; position: relative; }
+  .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); border-radius: 999px; padding: 6px 16px; font-size: 13px; font-weight: 600; color: rgba(255,255,255,.85); margin-bottom: 20px; }
+  .hero-badge-dot { width: 8px; height: 8px; background: #4ADE80; border-radius: 50%; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
+  .hero h1 { font-size: clamp(32px, 4vw, 48px); font-weight: 900; color: #fff; line-height: 1.1; letter-spacing: -1.5px; margin-bottom: 16px; }
+  .hero-location { font-size: 15px; font-weight: 600; color: rgba(255,255,255,.65); letter-spacing: .3px; margin-bottom: 28px; display: flex; align-items: center; gap: 8px; }
+  .hero-stats { display: flex; gap: 0; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.12); border-radius: 12px; overflow: hidden; width: fit-content; margin-bottom: 24px; }
+  .hero-stat { padding: 16px 24px; text-align: center; border-right: 1px solid rgba(255,255,255,.1); }
+  .hero-stat:last-child { border-right: none; }
+  .hero-stat-val { font-size: 22px; font-weight: 900; color: #fff; letter-spacing: -1px; line-height: 1; }
+  .hero-stat-label { font-size: 11px; font-weight: 600; color: rgba(255,255,255,.5); letter-spacing: .5px; text-transform: uppercase; margin-top: 5px; }
+  .hero-trust { font-size: 13px; color: rgba(255,255,255,.45); display: flex; align-items: center; gap: 6px; }
+  .hero-trust span { color: rgba(255,255,255,.65); }
+
+  /* ── FORM CARD ── */
+  .msf-card { background: #fff; border-radius: 20px; padding: 32px 28px; box-shadow: 0 12px 48px rgba(0,0,0,.3); position: relative; }
+  .msf-progress { display: flex; align-items: center; gap: 0; margin-bottom: 24px; }
+  .msf-step-dot { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 800; border: 2px solid var(--border); color: var(--muted); background: #fff; transition: all .3s; flex-shrink: 0; }
+  .msf-step-dot.active { background: var(--blue); border-color: var(--blue); color: #fff; }
+  .msf-step-dot.done { background: var(--green); border-color: var(--green); color: #fff; }
+  .msf-step-line { flex: 1; height: 2px; background: var(--border); transition: background .3s; }
+  .msf-step-line.done { background: var(--green); }
+  .msf-title { font-size: 18px; font-weight: 800; color: var(--navy); margin-bottom: 6px; }
+  .msf-sub { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+  .msf-field { margin-bottom: 14px; }
+  .msf-field label { display: block; font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+  .msf-field input[type=text], .msf-field input[type=email], .msf-field input[type=tel], .msf-field textarea {
+    width: 100%; border: 1.5px solid var(--border); border-radius: 10px; padding: 12px 14px;
+    font-family: 'Inter', sans-serif; font-size: 14px; color: var(--text); outline: none; transition: border-color .15s;
+  }
+  .msf-field input:focus, .msf-field textarea:focus { border-color: var(--blue); }
+  .msf-field input.error { border-color: #EF4444; }
+  .msf-field .field-error { font-size: 12px; color: #EF4444; margin-top: 4px; display: none; }
+  .msf-field .field-error.show { display: block; }
+  .msf-field textarea { resize: none; height: 90px; }
+  .msf-q { margin-bottom: 16px; }
+  .msf-q-label { font-size: 13px; font-weight: 600; color: #374151; margin-bottom: 8px; }
+  .msf-opts { display: flex; gap: 8px; flex-wrap: wrap; }
+  .msf-opt { display: flex; align-items: center; gap: 6px; background: #F9FAFB; border: 1.5px solid var(--border); border-radius: 8px; padding: 8px 14px; cursor: pointer; font-size: 13px; font-weight: 500; transition: all .2s; user-select: none; }
+  .msf-opt input { display: none; }
+  .msf-opt:hover { border-color: var(--blue); background: #EFF6FF; }
+  .msf-opt.selected { background: #EFF6FF; border-color: var(--blue); color: var(--navy); font-weight: 600; }
+  .msf-next { width: 100%; background: var(--blue); color: #fff; border: none; border-radius: 12px; padding: 15px; font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 800; cursor: pointer; margin-top: 16px; transition: background .15s; letter-spacing: .2px; }
+  .msf-next:hover { background: #1558c0; }
+  .msf-step { display: none; }
+  .msf-step.active { display: block; }
+  .msf-disclaimer { font-size: 11px; color: var(--muted); text-align: center; margin-top: 12px; line-height: 1.5; }
+
+  /* ── BENEFITS ── */
+  .benefits { padding: 80px 24px; background: #fff; }
+  .benefits-inner { max-width: 1100px; margin: 0 auto; }
+  .section-label { font-size: 12px; font-weight: 700; color: var(--blue); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 12px; }
+  .section-title { font-size: clamp(26px, 3vw, 36px); font-weight: 900; color: var(--navy); letter-spacing: -1px; margin-bottom: 48px; }
+  .benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .benefit-card { background: var(--bg); border: 1px solid var(--border); border-radius: 16px; padding: 28px 24px; }
+  .benefit-icon { font-size: 28px; margin-bottom: 14px; }
+  .benefit-title { font-size: 16px; font-weight: 800; color: var(--navy); margin-bottom: 8px; }
+  .benefit-desc { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+  /* ── REQUIREMENTS ── */
+  .requirements { padding: 80px 24px; background: var(--bg); }
+  .requirements-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+  .req-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+  .req-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 15px; color: var(--text); line-height: 1.5; }
+  .req-check { width: 22px; height: 22px; background: var(--green-bg); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+  .req-check svg { width: 12px; height: 12px; }
+
+  /* ── CLOSING CTA ── */
+  .cta-section { background: linear-gradient(135deg, #0F2D5E 0%, #1a3a6e 100%); padding: 80px 24px; text-align: center; }
+  .cta-section h2 { font-size: clamp(28px, 3vw, 40px); font-weight: 900; color: #fff; letter-spacing: -1px; margin-bottom: 12px; }
+  .cta-section p { font-size: 16px; color: rgba(255,255,255,.7); margin-bottom: 32px; max-width: 560px; margin-left: auto; margin-right: auto; line-height: 1.6; }
+  .cta-salary { display: inline-block; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); border-radius: 12px; padding: 16px 32px; margin-bottom: 32px; }
+  .cta-salary-val { font-size: 36px; font-weight: 900; color: #fff; letter-spacing: -1.5px; }
+  .cta-salary-label { font-size: 13px; color: rgba(255,255,255,.6); font-weight: 600; text-transform: uppercase; letter-spacing: .5px; margin-top: 4px; }
+  .cta-perks { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 36px; }
+  .cta-perk { font-size: 14px; color: rgba(255,255,255,.75); display: flex; align-items: center; gap: 6px; }
+  .cta-btn { display: inline-block; background: var(--blue); color: #fff; font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 800; padding: 16px 40px; border-radius: 12px; border: none; cursor: pointer; text-decoration: none; transition: background .2s; letter-spacing: .2px; }
+  .cta-btn:hover { background: #1558c0; }
+
+  /* ── FOOTER ── */
+  footer { background: #0a1f42; padding: 32px 24px; text-align: center; }
+  footer p { font-size: 13px; color: rgba(255,255,255,.4); }
+  footer a { color: rgba(255,255,255,.6); text-decoration: none; }
+
+  @media (max-width: 900px) {
+    .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+    .benefits-grid { grid-template-columns: 1fr; }
+    .requirements-inner { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 768px) {
+    .hero h1 { letter-spacing: -0.5px; }
+    .hero-stats { flex-wrap: wrap; }
+    .msf-card { padding: 24px 20px; border-radius: 16px; }
+  }
+  .nav-logo { height: 56px; display: block; background: #fff; padding: 4px 12px; border-radius: 10px; }
+  .nav-cta { white-space: nowrap; }
+  @media (max-width: 600px) { .nav-logo { height: 40px; padding: 3px 8px; border-radius: 8px; } }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div><img class="nav-logo" src="/fiacon-facility-services.png" alt="Fiacon Facility Services"></div>
+  <a href="#apply" class="nav-cta">Apply Now →</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="apply">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge"><span class="hero-badge-dot"></span> We Are Hiring — Apply Now</div>
+      <h1>We're Hiring: Lawn &amp; Garden Technician</h1>
+      <div class="hero-location">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="rgba(255,255,255,.65)" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        Sydney &amp; Surrounds, NSW
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="hero-stat-val">$90K</div><div class="hero-stat-label">Salary</div></div>
+        <div class="hero-stat"><div class="hero-stat-val">Full</div><div class="hero-stat-label">Time</div></div>
+      </div>
+      <div class="hero-trust">✅ <span>30+ years in business</span> · Australian-owned</div>
+    </div>
+
+    <!-- FORM -->
+    <div class="msf-card">
+      <div class="msf-progress">
+        <div class="msf-step-dot active" id="dot1">1</div>
+        <div class="msf-step-line" id="line1"></div>
+        <div class="msf-step-dot" id="dot2">2</div>
+        <div class="msf-step-line" id="line2"></div>
+        <div class="msf-step-dot" id="dot3">3</div>
+      </div>
+
+      <form id="msf-form" novalidate>
+        <!-- Step 1 -->
+        <div class="msf-step active" id="step1">
+          <div class="msf-title">Let's start with your details</div>
+          <div class="msf-sub">Takes 60 seconds. No CV required.</div>
+          <div class="msf-field">
+            <label>Full Name</label>
+            <input type="text" name="msf_name" placeholder="Your full name" required>
+          </div>
+          <div class="msf-field">
+            <label>Mobile Number</label>
+            <input type="tel" name="msf_phone" id="msf_phone" placeholder="Mobile Number" required>
+            <div class="field-error" id="phone-error">Please enter a valid Australian phone number</div>
+          </div>
+          <div class="msf-field">
+            <label>Email Address</label>
+            <input type="email" name="msf_email" placeholder="your@email.com" required>
+          </div>
+          <button type="button" class="msf-next" onclick="nextStep(1)">Continue →</button>
+          <div class="msf-disclaimer">Your information is kept private and secure.</div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="msf-step" id="step2">
+          <div class="msf-title">A few quick questions</div>
+          <div class="msf-sub">Honest answers only — helps us find the right fit.</div>
+
+          <div class="msf-q">
+            <div class="msf-q-label">Do you have permanent work rights in Australia?</div>
+            <div class="msf-opts" data-field="m2q1">
+              <label class="msf-opt"><input type="radio" name="m2q1" value="Yes"> Yes</label>
+              <label class="msf-opt"><input type="radio" name="m2q1" value="No"> No</label>
+            </div>
+          </div>
+
+          <div class="msf-q">
+            <div class="msf-q-label">Years of experience in garden / grounds maintenance</div>
+            <div class="msf-opts" data-field="m2q2">
+              <label class="msf-opt"><input type="radio" name="m2q2" value="5+ years"> 5+ years</label>
+              <label class="msf-opt"><input type="radio" name="m2q2" value="2–4 years"> 2–4 years</label>
+              <label class="msf-opt"><input type="radio" name="m2q2" value="Less than 2 years"> Less than 2 years</label>
+              <label class="msf-opt"><input type="radio" name="m2q2" value="No experience"> No experience</label>
+            </div>
+          </div>
+
+          <div class="msf-q">
+            <div class="msf-q-label">Do you hold a current Australian driver's licence?</div>
+            <div class="msf-opts" data-field="m2q3">
+              <label class="msf-opt"><input type="radio" name="m2q3" value="Yes"> Yes</label>
+              <label class="msf-opt"><input type="radio" name="m2q3" value="No"> No</label>
+            </div>
+          </div>
+
+          <button type="button" class="msf-next" onclick="nextStep(2)">Continue →</button>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="msf-step" id="step3">
+          <div class="msf-title">Almost done!</div>
+          <div class="msf-sub">Three more and you're in.</div>
+
+          <div class="msf-field">
+            <label>What's your expected annual salary?</label>
+            <input type="text" name="msf_salary" placeholder="e.g. $65,000">
+          </div>
+
+          <div class="msf-field">
+            <label>What's your notice period?</label>
+            <input type="text" name="msf_notice" placeholder="e.g. 2 weeks, Immediate">
+          </div>
+
+          <div class="msf-q">
+            <div class="msf-q-label">Do you consent to a medical check if required?</div>
+            <div class="msf-opts" data-field="m3q6">
+              <label class="msf-opt"><input type="radio" name="m3q6" value="Yes"> Yes</label>
+              <label class="msf-opt"><input type="radio" name="m3q6" value="No"> No</label>
+            </div>
+          </div>
+
+          <button type="button" class="msf-next" onclick="submitForm()" id="submit-btn">Submit Application →</button>
+          <div class="msf-disclaimer">By submitting you agree to be contacted about this role.</div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="benefits">
+  <div class="benefits-inner">
+    <div class="section-label">Why Join Fiacon</div>
+    <div class="section-title">Everything you need to do great work</div>
+    <div class="benefits-grid">
+
+      <div class="benefit-card">
+        <div class="benefit-icon">🚗</div>
+        <div class="benefit-title">Vehicle &amp; Fuel Provided</div>
+        <div class="benefit-desc">Work vehicle, toll pass, and fuel card all provided. No out-of-pocket costs getting to site.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🌿</div>
+        <div class="benefit-title">All Equipment Supplied</div>
+        <div class="benefit-desc">Mowers, whipper snippers, hedgers, PPE — everything is supplied and maintained for you.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🕖</div>
+        <div class="benefit-title">Consistent Hours</div>
+        <div class="benefit-desc">Monday to Friday, 7am–3pm. Stable hours with a great work-life balance built in.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">📍</div>
+        <div class="benefit-title">Sydney-Wide Sites</div>
+        <div class="benefit-desc">Service quality commercial and industrial sites across metropolitan Sydney and surrounds.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🤝</div>
+        <div class="benefit-title">Supportive Team</div>
+        <div class="benefit-desc">You're not on your own. Clear schedules, checklists, and a team backing you up every day.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">📈</div>
+        <div class="benefit-title">Grow With Us</div>
+        <div class="benefit-desc">Fiacon is growing fast. Show initiative and there's a clear path to senior roles.</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:40px">
+      <a href="#apply" class="cta-btn">Apply Now →</a>
+    </div>
+  </div>
+</section>
+
+<!-- REQUIREMENTS -->
+<section class="requirements">
+  <div class="requirements-inner">
+    <div>
+      <div class="section-label">What We're Looking For</div>
+      <div class="section-title">The essentials</div>
+      <ul class="req-list">
+        <li><div class="req-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Current valid driver's licence</li>
+        <li><div class="req-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Full Australian working rights</li>
+        <li><div class="req-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Experience in lawn care or grounds maintenance (or a genuine willingness to learn)</li>
+        <li><div class="req-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Based in or able to work across the Sydney region</li>
+        <li><div class="req-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Willing to undergo a police/background check</li>
+        <li><div class="req-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Physically fit and comfortable working outdoors in all conditions</li>
+      </ul>
+    </div>
+    <div>
+      <div class="section-label">What Happens Next</div>
+      <div class="section-title">Simple process</div>
+      <ul class="req-list">
+        <li><div class="req-check" style="background:#EFF6FF"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#1A6FE8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Submit your application — takes 2 minutes</li>
+        <li><div class="req-check" style="background:#EFF6FF"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#1A6FE8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>We review your answers and reach out within 24 hours</li>
+        <li><div class="req-check" style="background:#EFF6FF"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#1A6FE8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>A quick phone call to get to know each other</li>
+        <li><div class="req-check" style="background:#EFF6FF"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#1A6FE8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>If it's a great fit — welcome aboard 🌿</li>
+      </ul>
+      <div style="margin-top:32px"><a href="#apply" class="cta-btn">Apply Now →</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING CTA -->
+<section class="cta-section">
+  <div class="cta-salary">
+    <div class="cta-salary-val">$90,000</div>
+    <div class="cta-salary-label">Per Year + Vehicle + Equipment + PPE</div>
+  </div>
+  <h2>Ready to join the team?</h2>
+  <p>Full-time role, Monday to Friday. Work vehicle, fuel card, and all equipment provided from day one. Apply now and we'll be in touch within 24 hours.</p>
+  <div class="cta-perks">
+    <span class="cta-perk">✅ Work vehicle provided</span>
+    <span class="cta-perk">✅ All equipment supplied</span>
+    <span class="cta-perk">✅ 7am–3pm Mon–Fri</span>
+    <span class="cta-perk">✅ Sydney-wide sites</span>
+  </div>
+  <a href="#apply" class="cta-btn">Apply Now — Takes 2 Minutes →</a>
+</section>
+
+<footer>
+  <p>© 2026 Fiacon Facility Services · <a href="mailto:rocco.m@fiacon.com.au">rocco.m@fiacon.com.au</a> · <a href="tel:0438268660">0438 268 660</a></p>
+</footer>
+
+<script>
+
+  let msfData = {}
+
+  function validatePhone(val) {
+    const stripped = val.replace(/[\s\-\(\)\.]/g, '')
+    const intl = stripped.replace(/^\+61/, '0')
+    return /^0[2-9]\d{8}$/.test(intl)
+  }
+
+  const phoneInput = document.getElementById('msf_phone')
+  if (phoneInput) {
+    phoneInput.addEventListener('input', function() {
+      let v = this.value.replace(/\D/g, '').substring(0, 10)
+      if (v.length > 4 && v.length <= 7) v = v.slice(0,4) + ' ' + v.slice(4)
+      else if (v.length > 7) v = v.slice(0,4) + ' ' + v.slice(4,7) + ' ' + v.slice(7)
+      this.value = v
+      this.classList.remove('error')
+      document.getElementById('phone-error').classList.remove('show')
+    })
+  }
+
+  function updateProgress(step) {
+    for (let i = 1; i <= 3; i++) {
+      const dot = document.getElementById('dot' + i)
+      if (i < step) { dot.className = 'msf-step-dot done'; dot.innerHTML = '✓' }
+      else if (i === step) { dot.className = 'msf-step-dot active'; dot.textContent = i }
+      else { dot.className = 'msf-step-dot'; dot.textContent = i }
+    }
+    for (let i = 1; i <= 2; i++) {
+      document.getElementById('line' + i).className = 'msf-step-line' + (i < step ? ' done' : '')
+    }
+  }
+
+  function showStep(n) {
+    document.querySelectorAll('.msf-step').forEach(s => s.classList.remove('active'))
+    document.getElementById('step' + n).classList.add('active')
+    document.querySelector('.msf-card').scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+  }
+
+  function nextStep(step) {
+    const form = document.getElementById('msf-form')
+    if (step === 1) {
+      const name = form.msf_name.value.trim()
+      const phoneVal = form.msf_phone.value.trim()
+      const email = form.msf_email.value.trim()
+      if (!name || !email) { alert('Please fill in all fields.'); return }
+      if (!validatePhone(phoneVal)) {
+        form.msf_phone.classList.add('error')
+        document.getElementById('phone-error').classList.add('show')
+        return
+      }
+      msfData.business_name = name
+      msfData.phone = phoneVal
+      msfData.email = email
+      updateProgress(2); showStep(2)
+    } else if (step === 2) {
+      const radios2 = ['m2q1','m2q2','m2q3']
+      for (const n of radios2) {
+        if (!form.querySelector(`input[name="${n}"]:checked`)) { alert('Please answer all questions.'); return }
+      }
+      msfData.q1 = form.querySelector('input[name="m2q1"]:checked')?.value || ''
+      msfData.q2 = form.querySelector('input[name="m2q2"]:checked')?.value || ''
+      msfData.q3 = form.querySelector('input[name="m2q3"]:checked')?.value || ''
+      updateProgress(3); showStep(3)
+    }
+  }
+
+  function submitForm() {
+    const form = document.getElementById('msf-form')
+    if (!form.msf_salary.value.trim()) { alert('Please enter your expected salary.'); return }
+    if (!form.msf_notice.value.trim()) { alert('Please enter your notice period.'); return }
+    if (!form.querySelector('input[name="m3q6"]:checked')) { alert('Please answer all questions.'); return }
+    msfData.q4 = form.msf_salary.value.trim()
+    msfData.q5 = form.msf_notice.value.trim()
+    msfData.q6 = form.querySelector('input[name="m3q6"]:checked')?.value || ''
+
+    document.getElementById('submit-btn').textContent = 'Submitting…'
+    document.getElementById('submit-btn').disabled = true
+
+    msfData.role_path = 'lawn-garden'
+
+    // 1. Google Sheets (proxied; routed to Rocco's sheet by role_path)
+    fetch('/api/sheets', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(msfData), keepalive: true }).catch(()=>{})
+
+    // 2. GHL: create contact, tagged fiacon-lawn-garden (drives Rocco's SMS workflow)
+    fetch('/api/ghl', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      keepalive: true,
+      body: JSON.stringify({
+        role_path: 'lawn-garden',
+        name: msfData.business_name,
+        phone: msfData.phone,
+        email: msfData.email,
+        q1: msfData.q1, // work rights
+        q2: msfData.q2, // experience
+        q3: msfData.q3, // licence
+        q4: msfData.q4, // salary
+        q5: msfData.q5, // notice
+        q6: msfData.q6, // medical
+      })
+    }).catch(()=>{})
+
+    window.location.href = '/lawn-garden/thank-you'
+  }
+
+  // Radio pill styling
+  document.querySelectorAll('.msf-opts').forEach(group => {
+    group.querySelectorAll('.msf-opt').forEach(opt => {
+      opt.addEventListener('click', () => {
+        group.querySelectorAll('.msf-opt').forEach(o => o.classList.remove('selected'))
+        opt.classList.add('selected')
+        const input = opt.querySelector('input')
+        if (input) input.checked = true
+      })
+    })
+  })
+</script>
+</body>
+</html>

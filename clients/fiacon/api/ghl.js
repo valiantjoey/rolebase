@@ -29,7 +29,8 @@ export default async function handler(req, res) {
         lastName,
         phone: body.phone,
         email: body.email,
-        tags: ['hiring-funnel'],
+        // Pages that send role_path get a role tag (e.g. fiacon-lawn-garden) for per-role GHL workflows
+        tags: ['hiring-funnel', ...(body.role_path ? ['fiacon-' + String(body.role_path).replace(/[^a-z0-9-]/gi, '')] : [])],
         source: 'Fiacon Cleaning Services Hiring Page',
         customFields: [
 
