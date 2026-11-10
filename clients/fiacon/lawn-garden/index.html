@@ -432,27 +432,10 @@
 
     msfData.role_path = 'lawn-garden'
 
-    // 1. Google Sheets (proxied; routed to Rocco's sheet by role_path)
+    // Google Sheet (scores it) + Rolebase portal, via the relay
     fetch('/api/sheets', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(msfData), keepalive: true }).catch(()=>{})
 
-    // 2. GHL: create contact, tagged fiacon-lawn-garden (drives Rocco's SMS workflow)
-    fetch('/api/ghl', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      keepalive: true,
-      body: JSON.stringify({
-        role_path: 'lawn-garden',
-        name: msfData.business_name,
-        phone: msfData.phone,
-        email: msfData.email,
-        q1: msfData.q1, // work rights
-        q2: msfData.q2, // experience
-        q3: msfData.q3, // licence
-        q4: msfData.q4, // salary
-        q5: msfData.q5, // notice
-        q6: msfData.q6, // medical
-      })
-    }).catch(()=>{})
+    // New-applicant emails come from the Rolebase portal (no GHL for this page).
 
     window.location.href = '/lawn-garden/thank-you'
   }
